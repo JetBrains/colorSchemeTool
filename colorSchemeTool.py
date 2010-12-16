@@ -408,8 +408,17 @@ custom_multi_line_comment = Attribute("CUSTOM_MULTI_LINE_COMMENT_ATTRIBUTES", do
 custom_valid_string_escape = Attribute("CUSTOM_VALID_STRING_ESCAPE_ATTRIBUTES", valid_string_escape)
 custom_invalid_string_escape = Attribute("CUSTOM_INVALID_STRING_ESCAPE_ATTRIBUTES", invalid_string_escape)
 
-def color_from_textmate(color):
-    return color[1:]
+def color_from_textmate(color, alpha_blend_with=None):
+    rgba = color[1:]
+    if len(rgba) == 8 and alpha_blend_with:
+        r, g, b = hex_to_rgb(rgba[:6])
+        rb, gb, bb = hex_to_rgb(alpha_blend_with[1:])
+        alpha = int(rgba[6:8], 16) / 256
+        r = r * alpha + rb * (1-alpha)
+        g = g * alpha + gb * (1-alpha)
+        b = b * alpha + bb * (1-alpha)
+        return rgb_to_hex(r, g, b)
+    return rgba[:6]
 
 def font_style_from_textmate(style):
     result = 0
@@ -459,11 +468,13 @@ def load_textmate_scheme(tmtheme):
 
     text.value = attr_from_textmate(default_settings)
 
+    background = default_settings['background']
+
     all_colors['CARET_COLOR'] = color_from_textmate(default_settings['caret'])
-    all_colors['CARET_ROW_COLOR'] = color_from_textmate(default_settings['lineHighlight'])
+    all_colors['CARET_ROW_COLOR'] = color_from_textmate(default_settings['lineHighlight'], background)
     all_colors['INDENT_GUIDE'] = color_from_textmate(default_settings['invisibles'])
     all_colors['WHITESPACES'] = color_from_textmate(default_settings['invisibles'])
-    all_colors['SELECTION_BACKGROUND'] = color_from_textmate(default_settings['selection'])
+    all_colors['SELECTION_BACKGROUND'] = color_from_textmate(default_settings['selection'], background)
     all_colors['CONSOLE_BACKGROUND_KEY'] = text.value.background
 
     for attr in all_attributes:
