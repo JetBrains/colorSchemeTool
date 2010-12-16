@@ -55,6 +55,7 @@ class AttributeValue:
         self.error_stripe = None
         self.effect_color = None
         self.effect_type = effect_type
+        self.inherited = False
 
 class DerivedAttributeValue:
     def __init__(self, parent=None, default_fore=None, default_back=None, default_font=0, error_stripe=None):
@@ -74,6 +75,10 @@ class DerivedAttributeValue:
         py, pi, pq = colorsys.rgb_to_yiq(*hex_to_rgb(p.value.background))
         return py < 0.5
 
+    @property
+    def inherited(self):
+        return self.parent.id != 'TEXT' and isinstance(self.parent.value, AttributeValue)
+
     def transform(self, default_value, add_luma=0.0):
         if self.inverted:
             dy, di, dq = colorsys.rgb_to_yiq(*hex_to_rgb(default_value))
@@ -86,7 +91,7 @@ class DerivedAttributeValue:
 
     @property
     def foreground(self):
-        if self.parent.id != 'TEXT' and isinstance(self.parent.value, AttributeValue):
+        if self.inherited:
             return self.parent.value.foreground
         if self.default_fore:
             return self.transform(self.default_fore)
@@ -96,7 +101,7 @@ class DerivedAttributeValue:
 
     @property
     def background(self):
-        if self.parent.id != 'TEXT' and isinstance(self.parent.value, AttributeValue):
+        if self.inherited:
             return self.parent.value.background
         if self.default_back:
             return self.transform(self.default_back, 0 if self.default_fore else 0.15)
@@ -110,7 +115,7 @@ class DerivedAttributeValue:
 
     @property
     def effect_color(self):
-        if self.parent.id != 'TEXT' and isinstance(self.parent.value, AttributeValue):
+        if self.inherited:
             return self.parent.value.effect_color
         if self.default_effect_color:
             return self.transform(self.default_effect_color)
@@ -159,7 +164,7 @@ def load_default_attributes(scheme_path):
             if option_name == 'EFFECT_COLOR': attr_value.default_effect_color = option_value
             default_attributes[name] = attr_value
 
-load_default_attributes('C:/JetBrains/IDEA/community/platform/platform-resources/src/DefaultColorSchemesManager.xml')
+load_default_attributes('DefaultColorSchemesManager.xml')
 
 for id in ["FOLDED_TEXT_ATTRIBUTES",
            "SEARCH_RESULT_ATTRIBUTES",                # EditorColors
@@ -185,7 +190,13 @@ for id in ["FOLDED_TEXT_ATTRIBUTES",
            "DIFF_MODIFIED",                           # DiffColors
            "DIFF_DELETED",
            "DIFF_INSERTED",
-           "DIFF_CONFLICT"
+           "DIFF_CONFLICT",
+           "CUSTOM_KEYWORD1_ATTRIBUTES",              # CustomHighlighterColors
+           "CUSTOM_KEYWORD2_ATTRIBUTES",
+           "CUSTOM_KEYWORD3_ATTRIBUTES",
+           "CUSTOM_KEYWORD4_ATTRIBUTES",
+           "BREAKPOINT_ATTRIBUTES",                   # DebuggerColors
+           "EXECUTIONPOINT_ATTRIBUTES"
           ]:
     Attribute(id, text)
 
@@ -204,13 +215,13 @@ doc_comment = Attribute("JAVA_DOC_COMMENT", line_comment, scope='comment.documen
 keyword = Attribute("JAVA_KEYWORD", text, scope='keyword')
 number = Attribute("JAVA_NUMBER", text, scope='constant.numeric')
 string = Attribute("JAVA_STRING", text, scope='string')
-opSign = Attribute("JAVA_OPERATION_SIGN", text, scope='punctuation')
-parenths = Attribute("JAVA_PARENTH", opSign)
-brackets = Attribute("JAVA_BRACKETS", opSign)
-braces = Attribute("JAVA_BRACES", opSign)
-comma = Attribute("JAVA_COMMA", opSign)
-dot = Attribute("JAVA_DOT", opSign)
-semicolon = Attribute("JAVA_SEMICOLON", opSign)
+opSign = Attribute("JAVA_OPERATION_SIGN", text, scope='keyword.operator')
+parenths = Attribute("JAVA_PARENTH", text, scope='punctuation')
+brackets = Attribute("JAVA_BRACKETS", text, scope='punctuation')
+braces = Attribute("JAVA_BRACES", text, scope='punctuation')
+comma = Attribute("JAVA_COMMA", text, scope='punctuation')
+dot = Attribute("JAVA_DOT", text, scope='punctuation')
+semicolon = Attribute("JAVA_SEMICOLON", text, scope='punctuation')
 valid_string_escape = Attribute("JAVA_VALID_STRING_ESCAPE", text, scope='constant.character.escape')
 invalid_string_escape = Attribute("JAVA_INVALID_STRING_ESCAPE", text, scope='invalid')
 doc_comment_tag = Attribute("JAVA_DOC_TAG", text)
@@ -237,7 +248,7 @@ html_entity_reference = Attribute("HTML_ENTITY_REFERENCE", xml_entity_reference)
 py_keyword = Attribute("PY.KEYWORD", keyword)
 py_string = Attribute("PY.STRING", string)
 py_number = Attribute("PY.NUMBER", number)
-py_comment = Attribute("PY.COMMENT", line_comment)
+py_comment = Attribute("PY.LINE_COMMENT", line_comment)
 py_opSign = Attribute("PY.OPERATION_SIGN", opSign)
 py_parenths = Attribute("PY.PARENTHS", parenths)
 py_brackets = Attribute("PY.BRACKETS", brackets)
@@ -389,6 +400,14 @@ rb_symbol = Attribute("RUBY_SYMBOL", rb_identifier, scope='constant.other.symbol
 rb_specific_call = Attribute("RUBY_SPECIFIC_CALL", rb_identifier, scope='storage')
 rb_paramdef = Attribute("RUBY_PARAMDEF_CALL", rb_identifier, scope='support.function')
 
+# CustomHighlighter
+custom_number = Attribute("CUSTOM_NUMBER_ATTRIBUTES", number)
+custom_string = Attribute("CUSTOM_STRING_ATTRIBUTES", string)
+custom_line_comment = Attribute("CUSTOM_LINE_COMMENT_ATTRIBUTES", line_comment)
+custom_multi_line_comment = Attribute("CUSTOM_MULTI_LINE_COMMENT_ATTRIBUTES", doc_comment)
+custom_valid_string_escape = Attribute("CUSTOM_VALID_STRING_ESCAPE_ATTRIBUTES", valid_string_escape)
+custom_invalid_string_escape = Attribute("CUSTOM_INVALID_STRING_ESCAPE_ATTRIBUTES", invalid_string_escape)
+
 def color_from_textmate(color):
     return color[1:]
 
@@ -420,6 +439,8 @@ def find_by_scope(settings, scope):
             scopes_of_setting = scope_of_setting.split(",")
             for aScope in scopes_of_setting:
                 aScope = aScope.strip()
+                chain = aScope.split(' ')
+                aScope = chain[-1]
                 if aScope.startswith(scope):
                     return setting
                 if scope.startswith(aScope):
@@ -440,6 +461,10 @@ def load_textmate_scheme(tmtheme):
 
     all_colors['CARET_COLOR'] = color_from_textmate(default_settings['caret'])
     all_colors['CARET_ROW_COLOR'] = color_from_textmate(default_settings['lineHighlight'])
+    all_colors['INDENT_GUIDE'] = color_from_textmate(default_settings['invisibles'])
+    all_colors['WHITESPACES'] = color_from_textmate(default_settings['invisibles'])
+    all_colors['SELECTION_BACKGROUND'] = color_from_textmate(default_settings['selection'])
+    all_colors['CONSOLE_BACKGROUND_KEY'] = text.value.background
 
     for attr in all_attributes:
         if attr.scope:
@@ -463,7 +488,9 @@ def write_idea_scheme(filename):
         ET.SubElement(colors, 'option', name=name, value=value)
     attributes = ET.SubElement(scheme, 'attributes')
     for attr in all_attributes:
-        if isinstance(attr.value, DerivedAttributeValue):
+        if attr.value.inherited:
+            print 'inheriting ' + attr.id + ' from ' + attr.parent.id
+        elif isinstance(attr.value, DerivedAttributeValue):
             print 'transforming IDEA default color for ' + attr.id
         option = ET.SubElement(attributes, 'option', name=attr.id)
         value = ET.SubElement(option, 'value')
