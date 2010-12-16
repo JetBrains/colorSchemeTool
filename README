@@ -11,3 +11,6 @@ text is readable.
 The table of the mappings is not yet complete; additions and corrections
 are very much welcome.
 
+Note that the tool requires Python version 2.7. The default version of
+Python installed on MacOS X is 2.6; you'll need to use Python from MacPorts
+if you'd like to run the tool on MacOS X.
