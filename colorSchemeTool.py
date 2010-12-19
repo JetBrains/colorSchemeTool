@@ -472,8 +472,8 @@ def load_textmate_scheme(tmtheme):
 
     all_colors['CARET_COLOR'] = color_from_textmate(default_settings['caret'])
     all_colors['CARET_ROW_COLOR'] = color_from_textmate(default_settings['lineHighlight'], background)
-    all_colors['INDENT_GUIDE'] = color_from_textmate(default_settings['invisibles'])
-    all_colors['WHITESPACES'] = color_from_textmate(default_settings['invisibles'])
+    all_colors['INDENT_GUIDE'] = color_from_textmate(default_settings['invisibles'], background)
+    all_colors['WHITESPACES'] = color_from_textmate(default_settings['invisibles'], background)
     all_colors['SELECTION_BACKGROUND'] = color_from_textmate(default_settings['selection'], background)
     all_colors['CONSOLE_BACKGROUND_KEY'] = text.value.background
 
