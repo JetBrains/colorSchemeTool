@@ -400,6 +400,19 @@ rb_symbol = Attribute("RUBY_SYMBOL", rb_identifier, scope='constant.other.symbol
 rb_specific_call = Attribute("RUBY_SPECIFIC_CALL", rb_identifier, scope='storage')
 rb_paramdef = Attribute("RUBY_PARAMDEF_CALL", rb_identifier, scope='support.function')
 
+# HAML
+haml_text = Attribute("HAML_TEXT", text, scope='text.haml')
+haml_tag_name = Attribute("HAML_TAG", haml_text, scope='meta.tag.haml')
+haml_class = Attribute("HAML_CLASS", haml_text, scope='entity.name.tag.class.haml')
+haml_id = Attribute("HAML_ID", haml_text, scope='entity.name.tag.id.haml')
+haml_comment = Attribute("HAML_COMMENT", line_comment, scope='comment.line.slash.haml')
+haml_xhtml = Attribute("HAML_XHTML", haml_text, scope='meta.prolog.haml')
+haml_code_injection = Attribute("HAML_RUBY_CODE", haml_text, scope='source.ruby.embedded.haml')
+haml_ruby_evaluator = Attribute("HAML_RUBY_START", haml_text, scope='meta.line.ruby.haml')
+haml_line_continuation = Attribute("HAML_LINE_CONTINUATION", haml_text)
+haml_filter = Attribute("HAML_FILTER", haml_text)
+haml_filter_content = Attribute("HAML_FILTER_CONTENT", haml_text)
+
 # CustomHighlighter
 custom_number = Attribute("CUSTOM_NUMBER_ATTRIBUTES", number)
 custom_string = Attribute("CUSTOM_STRING_ATTRIBUTES", string)
