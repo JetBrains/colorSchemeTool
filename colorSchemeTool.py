@@ -407,7 +407,7 @@ haml_class = Attribute("HAML_CLASS", haml_text, scope='entity.name.tag.class.ham
 haml_id = Attribute("HAML_ID", haml_text, scope='entity.name.tag.id.haml')
 haml_comment = Attribute("HAML_COMMENT", line_comment, scope='comment.line.slash.haml')
 haml_xhtml = Attribute("HAML_XHTML", haml_text, scope='meta.prolog.haml')
-haml_code_injection = Attribute("HAML_RUBY_CODE", haml_text, scope='source.ruby.embedded.haml')
+#haml_code_injection = Attribute("HAML_RUBY_CODE", haml_text, scope='source.ruby.embedded.haml')
 haml_ruby_evaluator = Attribute("HAML_RUBY_START", haml_text, scope='meta.line.ruby.haml')
 haml_line_continuation = Attribute("HAML_LINE_CONTINUATION", haml_text)
 haml_filter = Attribute("HAML_FILTER", haml_text)
