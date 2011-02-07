@@ -371,7 +371,7 @@ yaml_sign = Attribute("YAML_SIGN", opSign)
 # RubyHighlighter
 rb_keyword = Attribute("RUBY_KEYWORD", keyword)
 rb_comment = Attribute("RUBY_COMMENT", line_comment)
-rb_heredoc_id = Attribute("RUBY_HEREDOC_ID", text)  # scope???
+rb_heredoc_id = Attribute("RUBY_HEREDOC_ID", text, scope="string.quoted.double.ruby")
 rb_number = Attribute("RUBY_NUMBER", number)
 rb_string = Attribute("RUBY_STRING", string)
 rb_escape_sequence = Attribute("RUBY_ESCAPE_SEQUENCE", valid_string_escape)
