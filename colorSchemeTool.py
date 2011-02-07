@@ -430,6 +430,16 @@ cucumber_table_pipe = Attribute("PIPE", semicolon, scope='keyword.control.cucumb
 cucumber_outline_param_substitution = Attribute("GHERKIN_OUTLINE_PARAMETER_SUBSTITUTION", cucumber_text, scope='variable.other')
 cucumber_scenario_regexp_param = Attribute("GHERKIN_REGEXP_PARAMETER", cucumber_text, scope='string.quoted.double')
 
+# ERB : "text.html.ruby"
+erb_text = xml_tag
+erb_block_start = Attribute("RHTML_SCRIPTLET_START_ID", erb_text, scope='punctuation.section.embedded.ruby')
+erb_block_end = Attribute("RHTML_SCRIPTLET_END_ID", erb_text, scope='punctuation.section.embedded.ruby')
+erb_block_expression_start = Attribute("RHTML_EXPRESSION_START_ID", erb_text, scope='punctuation.section.embedded.ruby')
+erb_block_expression_end = Attribute("RHTML_EXPRESSION_END_ID", erb_text, scope='punctuation.section.embedded.ruby')
+erb_comment = Attribute("RHTML_COMMENT_ID", line_comment, scope='comment.block.erb')
+erb_omit_line_modifier = Attribute("RHTML_OMIT_NEW_LINE_ID", erb_text, scope='punctuation.section.embedded.ruby')
+#erb_ruby_injection_bg = Attribute("RHTML_SCRIPTING_BACKGROUND_ID", erb_text, scope='source.ruby.rails.embedded.html')
+
 # CustomHighlighter
 custom_number = Attribute("CUSTOM_NUMBER_ATTRIBUTES", number)
 custom_string = Attribute("CUSTOM_STRING_ATTRIBUTES", string)
