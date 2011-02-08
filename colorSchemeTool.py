@@ -8,6 +8,8 @@ import sys
 default_attributes = {}
 all_attributes = []
 all_colors = {}
+IGNORE_COLOR = (None, None, None)
+IGNORE_COLOR_VALUE = "IGNORE_COLOR"
 
 # http://effbot.org/zone/element-lib.htm#prettyprint
 def indent(elem, level=0):
@@ -134,9 +136,9 @@ class Attribute:
         else:
             self.value = DerivedAttributeValue(parent=parent)
             if foreground:
-                self.value.default_fore = rgb256_to_hex(*foreground)
+                self.value.default_fore = rgb256_to_hex(*foreground) if foreground != IGNORE_COLOR else IGNORE_COLOR_VALUE
             if background:
-                self.value.default_back = rgb256_to_hex(*background)
+                self.value.default_back = rgb256_to_hex(*background) if background != IGNORE_COLOR else IGNORE_COLOR_VALUE
             if font_style:
                 self.value.default_font = font_style
             if effect_type:
@@ -407,7 +409,7 @@ haml_class = Attribute("HAML_CLASS", haml_text, scope='entity.name.tag.class.ham
 haml_id = Attribute("HAML_ID", haml_text, scope='entity.name.tag.id.haml')
 haml_comment = Attribute("HAML_COMMENT", line_comment, scope='comment.line.slash.haml')
 haml_xhtml = Attribute("HAML_XHTML", haml_text, scope='meta.prolog.haml')
-#haml_code_injection = Attribute("HAML_RUBY_CODE", haml_text, scope='source.ruby.embedded.haml')
+haml_code_injection = Attribute("HAML_RUBY_CODE", haml_text, scope='source.ruby.embedded.haml', foreground=IGNORE_COLOR)
 haml_ruby_evaluator = Attribute("HAML_RUBY_START", haml_text, scope='meta.line.ruby.haml')
 haml_line_continuation = Attribute("HAML_LINE_CONTINUATION", haml_text)
 haml_filter = Attribute("HAML_FILTER", haml_text)
@@ -438,7 +440,7 @@ erb_block_expression_start = Attribute("RHTML_EXPRESSION_START_ID", erb_text, sc
 erb_block_expression_end = Attribute("RHTML_EXPRESSION_END_ID", erb_text, scope='punctuation.section.embedded.ruby')
 erb_comment = Attribute("RHTML_COMMENT_ID", line_comment, scope='comment.block.erb')
 erb_omit_line_modifier = Attribute("RHTML_OMIT_NEW_LINE_ID", erb_text, scope='punctuation.section.embedded.ruby')
-#erb_ruby_injection_bg = Attribute("RHTML_SCRIPTING_BACKGROUND_ID", erb_text, scope='source.ruby.rails.embedded.html')
+erb_ruby_injection_bg = Attribute("RHTML_SCRIPTING_BACKGROUND_ID", erb_text, scope='source.ruby.rails.embedded.html', foreground=IGNORE_COLOR)
 
 # CustomHighlighter
 custom_number = Attribute("CUSTOM_NUMBER_ATTRIBUTES", number)
@@ -465,12 +467,15 @@ def font_style_from_textmate(style):
     if 'italic' in style: result += 2
     return result
 
-def attr_from_textmate(settings):
+def attr_from_textmate(settings, old_value):
     result = AttributeValue()
-    if 'foreground' in settings:
+
+    if ('foreground' in settings) and ((old_value == None) or (old_value.default_fore != IGNORE_COLOR_VALUE)):
         result.foreground = color_from_textmate(settings['foreground'])
-    if 'background' in settings:
+
+    if ('background' in settings) and ((old_value == None) or (old_value.default_back != IGNORE_COLOR_VALUE)):
         result.background = color_from_textmate(settings['background'])
+
     if 'fontStyle' in settings:
         tm_font_style = settings['fontStyle']
         result.font_style = font_style_from_textmate(tm_font_style)
@@ -506,7 +511,7 @@ def load_textmate_scheme(tmtheme):
         return
     default_settings = default_settings['settings']
 
-    text.value = attr_from_textmate(default_settings)
+    text.value = attr_from_textmate(default_settings, None)
 
     background = default_settings['background']
 
@@ -525,7 +530,7 @@ def load_textmate_scheme(tmtheme):
                 if the_scope:
                     print "converting attribute " + attr.id + " from TextMate scope " + the_scope
                     used_scopes.add(the_scope)
-                attr.value = attr_from_textmate(settings['settings'])
+                attr.value = attr_from_textmate(settings['settings'], attr.value)
     return all_settings, used_scopes
 
 def write_idea_scheme(filename):
@@ -546,9 +551,9 @@ def write_idea_scheme(filename):
         option = ET.SubElement(attributes, 'option', name=attr.id)
         value = ET.SubElement(option, 'value')
         fore = attr.value.foreground
-        if fore: ET.SubElement(value, 'option', name='FOREGROUND', value=fore)
+        if fore and (fore != IGNORE_COLOR_VALUE): ET.SubElement(value, 'option', name='FOREGROUND', value=fore)
         back = attr.value.background
-        if back: ET.SubElement(value, 'option', name='BACKGROUND', value=back)
+        if back and (back != IGNORE_COLOR_VALUE): ET.SubElement(value, 'option', name='BACKGROUND', value=back)
         if attr.value.font_style:
             ET.SubElement(value, 'option', name='FONT_TYPE', value=str(attr.value.font_style))
         if attr.value.effect_type:
