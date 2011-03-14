@@ -33,6 +33,9 @@ def hex_to_rgb(color):
     b = int(color[4:6], 16) / 256 if len(color) >= 6 else 0
     return r, g, b
 
+def hex_to_yiq(color):
+    return colorsys.rgb_to_yiq(*hex_to_rgb(color))
+
 def rgb256_to_hex(r, g, b):
     return "{0:02x}{1:02x}{2:02x}".format(r, g, b)
 
@@ -74,7 +77,7 @@ class DerivedAttributeValue:
         p = self.parent
         while not p.value.background:
             p = p.parent
-        py, pi, pq = colorsys.rgb_to_yiq(*hex_to_rgb(p.value.background))
+        py, pi, pq = hex_to_yiq(p.value.background)
         return py < 0.5
 
     @property
@@ -83,7 +86,7 @@ class DerivedAttributeValue:
 
     def transform(self, default_value, add_luma=0.0):
         if self.inverted:
-            dy, di, dq = colorsys.rgb_to_yiq(*hex_to_rgb(default_value))
+            dy, di, dq = hex_to_yiq(default_value)
             dy = 1 - dy
             if dy < 0.5:
                 dy += add_luma
@@ -95,7 +98,7 @@ class DerivedAttributeValue:
     def foreground(self):
         if self.inherited:
             return self.parent.value.foreground
-        if self.default_fore:
+        if self.default_fore and self.default_fore != IGNORE_COLOR_VALUE:
             return self.transform(self.default_fore)
         if self.parent.id != "TEXT":
             return self.parent.value.foreground
@@ -516,10 +519,21 @@ def load_textmate_scheme(tmtheme):
     background = default_settings['background']
 
     all_colors['CARET_COLOR'] = color_from_textmate(default_settings['caret'])
-    all_colors['CARET_ROW_COLOR'] = color_from_textmate(default_settings['lineHighlight'], background)
     all_colors['INDENT_GUIDE'] = color_from_textmate(default_settings['invisibles'], background)
     all_colors['WHITESPACES'] = color_from_textmate(default_settings['invisibles'], background)
-    all_colors['SELECTION_BACKGROUND'] = color_from_textmate(default_settings['selection'], background)
+
+    selection_background = color_from_textmate(default_settings['selection'], background)
+    caret_row_color = color_from_textmate(default_settings['lineHighlight'], background)
+    if selection_background == caret_row_color:
+        y, i, q = hex_to_yiq(caret_row_color)
+        if y < 0.5:
+            y /= 2
+        else:
+            y += 0.2
+        caret_row_color = rgb_to_hex(*colorsys.yiq_to_rgb(y, i, q))
+    all_colors['CARET_ROW_COLOR'] = caret_row_color
+    all_colors['SELECTION_BACKGROUND'] = selection_background
+    
     all_colors['CONSOLE_BACKGROUND_KEY'] = text.value.background
 
     for attr in all_attributes:
