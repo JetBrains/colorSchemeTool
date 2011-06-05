@@ -209,9 +209,13 @@ for id in ["FOLDED_TEXT_ATTRIBUTES",
 bad_character = Attribute("BAD_CHARACTER", text, scope='invalid')
 
 # CodeInsightColors
+local_variable = Attribute("LOCAL_VARIABLE_ATTRIBUTES", text)
+implicit_anonymous_class_parameter = Attribute("IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES", text)
 instance_field = Attribute("INSTANCE_FIELD_ATTRIBUTES", text)
 static_field = Attribute("STATIC_FIELD_ATTRIBUTES", text)
 static_method = Attribute("STATIC_METHOD_ATTRIBUTES", text)
+parameter = Attribute("PARAMETER_ATTRIBUTES", text)
+class_name = Attribute("CLASS_NAME_ATTRIBUTES", text)
 
 # SyntaxHighlighterColors
 line_comment = Attribute("JAVA_LINE_COMMENT", text, scope='comment.line')
@@ -293,6 +297,50 @@ bld_key = Attribute("BUILDOUT.KEY", keyword)
 bld_value = Attribute("BUILDOUT.VALUE", string)
 bld_comment = Attribute("BUILDOUT.LINE_COMMENT", line_comment)
 bld_separator = Attribute("BUILDOUT.KEY_VALUE_SEPARATOR", opSign)
+
+# LocaleSyntaxHighlighter
+locale_comment = Attribute("LOCALE.LINE_COMMENT", line_comment)
+locale_msgctxt = Attribute("LOCALE.MSGCTXT_KEYWORD", keyword)
+locale_msgid = Attribute("LOCALE.MSGID_KEYWORD", keyword)
+locale_msgid_plural = Attribute("LOCALE.MSGID_PLURAL_KEYWORD", keyword)
+locale_msgstr = Attribute("LOCALE.MSGSTR_KEYWORD", keyword)
+locale_msgstr_plural = Attribute("LOCALE.MSGSTR_PLURAL_KEYWORD", keyword)
+locale_string = Attribute("LOCALE.STRING_LITERAL", string)
+
+# REST
+rest_line_comment = Attribute("REST.LINE_COMMENT", line_comment)
+rest_section_header = Attribute("REST.SECTION.HEADER", number)
+rest_bold = Attribute("REST.BOLD", text, font_style=1)
+rest_italic = Attribute("REST.ITALIC", text, font_style=2)
+rest_fixed = Attribute("REST.FIXED", text, background=(217, 217, 240))
+rest_interpreted = Attribute("REST.INTERPRETED", text, background=(202, 218, 186))
+rest_ref_name = Attribute("REST.REF.NAME", string)
+rest_explicit = Attribute("REST.EXPLICIT", keyword)
+rest_field = Attribute("REST.FIELD", keyword)
+rest_inline = Attribute("REST.INLINE", text, background=(237, 252, 237))
+
+# SQL
+sql_bad_character = Attribute("SQL_BAD_CHARACTER", bad_character)
+sql_comment = Attribute("SQL_COMMENT", line_comment)
+sql_ident_delimited = Attribute("SQL_IDENT_DELIMITED", text)
+sql_ident = Attribute("SQL_IDENT", text)
+sql_semicolon = Attribute("SQL_SEMICOLON", semicolon)
+sql_comma = Attribute("SQL_COMMA", comma)
+sql_dot = Attribute("SQL_DOT", dot)
+sql_string = Attribute("SQL_STRING", string)
+sql_parens = Attribute("SQL_PARENS", parenths)
+sql_brackets = Attribute("SQL_BRACKETS", brackets)
+sql_braces = Attribute("SQL_BRACES", braces)
+sql_number = Attribute("SQL_NUMBER", number)
+sql_keyword = Attribute("SQL_KEYWORD", keyword)
+sql_procedure = Attribute("SQL_PROCEDURE", static_method)
+sql_parameter = Attribute("SQL_PARAMETER", parameter)
+sql_local_alias = Attribute("SQL_LOCAL_ALIAS", local_variable)
+sql_table = Attribute("SQL_TABLE", class_name)
+sql_column = Attribute("SQL_COLUMN", instance_field)
+sql_schema = Attribute("SQL_SCHEMA", class_name)
+sql_database_object = Attribute("SQL_DATABASE_OBJECT", class_name)
+sql_synthetic_entity = Attribute("SQL_SYNTETIC_ENTITY", implicit_anonymous_class_parameter)
 
 # RegExp
 rx_meta = Attribute("REGEXP.META", keyword)
