@@ -493,6 +493,16 @@ erb_comment = Attribute("RHTML_COMMENT_ID", line_comment, scope='comment.block.e
 erb_omit_line_modifier = Attribute("RHTML_OMIT_NEW_LINE_ID", erb_text, scope='punctuation.section.embedded.ruby')
 erb_ruby_injection_bg = Attribute("RHTML_SCRIPTING_BACKGROUND_ID", erb_text, scope='source.ruby.rails.embedded.html', foreground=IGNORE_COLOR)
 
+# ClojureHighlighter
+clj_comment = Attribute("Clojure Line comment", line_comment)
+clj_atom = Attribute("Clojure Atom", keyword)
+clj_keyword = Attribute("Clojure Keyword", rb_identifier)
+clj_numbers = Attribute("Clojure Numbers", number)
+clj_strings = Attribute("Clojure Strings", string)
+clj_character = Attribute("Clojure Character", string)
+clj_literal = Attribute("Clojure Literal", instance_field)
+clj_first_in_list = Attribute("First symbol in list", rb_identifier, font_style=1)
+
 # CustomHighlighter
 custom_number = Attribute("CUSTOM_NUMBER_ATTRIBUTES", number)
 custom_string = Attribute("CUSTOM_STRING_ATTRIBUTES", string)
