@@ -376,7 +376,7 @@ css_function = Attribute("CSS.FUNCTION", html_tag_name, scope='support.function.
 css_url = Attribute("CSS.URL", html_attribute_value, scope='variable.parameter.misc.css')
 
 # LESS
-less_variable = Attribute("LESS_VARIABLE", text, foreground=(104, 12, 122), font_style=1)
+less_variable = Attribute("LESS_VARIABLE", text, scope='variable.other.less')
 
 # SASS
 sass_rule = Attribute("SASS_RULE", keyword, scope='entity.other.attribute-name.id.sass')
