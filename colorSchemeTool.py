@@ -364,16 +364,16 @@ rx_quote_character = Attribute("REGEXP.QUOTE_CHARACTER", valid_string_escape)
 rx_comment = Attribute("REGEXP.COMMENT", line_comment)
 
 # CSS
-css_ident = Attribute("CSS.IDENT", html_tag_name, scope='meta.selector.css')
-css_comment = Attribute("CSS.COMMENT", html_comment)
+css_ident = Attribute("CSS.IDENT", html_tag_name, scope='entity.other.attribute-name.class.css')
+css_comment = Attribute("CSS.COMMENT", html_comment, scope='comment.block.css')
 css_property_name = Attribute("CSS.PROPERTY_NAME", html_attribute_name, scope='support.type.property-name')
-css_property_value = Attribute("CSS.PROPERTY_VALUE", html_attribute_value)
-css_tag_name = Attribute("CSS.TAG_NAME", html_tag_name)
+css_property_value = Attribute("CSS.PROPERTY_VALUE", html_attribute_value, scope='meta.property-value.css')
+css_tag_name = Attribute("CSS.TAG_NAME", html_tag_name, scope='entity.name.tag.css')
 css_string = Attribute("CSS.STRING", string)
 css_number = Attribute("CSS.NUMBER", number, scope='constant.numeric.css')
 css_keyword = Attribute("CSS.KEYWORD", keyword)
-css_function = Attribute("CSS.FUNCTION", html_tag_name)
-css_url = Attribute("CSS.URL", html_attribute_value)
+css_function = Attribute("CSS.FUNCTION", html_tag_name, scope='support.function.misc.css')
+css_url = Attribute("CSS.URL", html_attribute_value, scope='variable.parameter.misc.css')
 
 # LESS
 less_variable = Attribute("LESS_VARIABLE", text, foreground=(104, 12, 122), font_style=1)
