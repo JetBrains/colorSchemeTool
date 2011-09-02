@@ -261,8 +261,8 @@ html_attribute_value = Attribute("HTML_ATTRIBUTE_VALUE", xml_attribute_value)
 html_entity_reference = Attribute("HTML_ENTITY_REFERENCE", xml_entity_reference)
 
 # PyHighlighter
-py_keyword = Attribute("PY.KEYWORD", keyword)
-py_string = Attribute("PY.STRING", string)
+py_keyword = Attribute("PY.KEYWORD", keyword, scope="storage.type")
+py_string = Attribute("PY.STRING", string, 'string.quoted')
 py_number = Attribute("PY.NUMBER", number)
 py_comment = Attribute("PY.LINE_COMMENT", line_comment)
 py_opSign = Attribute("PY.OPERATION_SIGN", opSign)
