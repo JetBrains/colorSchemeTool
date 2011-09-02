@@ -10,7 +10,7 @@ default_attributes = {}
 all_attributes = []
 all_colors = {}
 IGNORE_COLOR = (None, None, None)
-IGNORE_COLOR_VALUE = "IGNORE_COLOR"
+IGNORE_COLOR_VALUE = "#IGNORE_COLOR"
 
 # http://effbot.org/zone/element-lib.htm#prettyprint
 def indent(elem, level=0):
@@ -86,6 +86,8 @@ class DerivedAttributeValue:
         return self.parent.id != 'TEXT' and isinstance(self.parent.value, AttributeValue)
 
     def transform(self, default_value, add_luma=0.0):
+        if default_value == IGNORE_COLOR_VALUE:
+            return IGNORE_COLOR_VALUE
         if self.inverted:
             dy, di, dq = hex_to_yiq(default_value)
             dy = 1 - dy
