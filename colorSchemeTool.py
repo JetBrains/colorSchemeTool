@@ -379,14 +379,16 @@ css_url = Attribute("CSS.URL", html_attribute_value, scope='variable.parameter.m
 less_variable = Attribute("LESS_VARIABLE", text, foreground=(104, 12, 122), font_style=1)
 
 # SASS
-sass_rule = Attribute("SASS_RULE", keyword)
-sass_attribute = Attribute("SASS_ATTRIBUTE", keyword)
-sass_constant = Attribute("SASS_CONSTANT", keyword, scope='constant', foreground=(128, 0, 128), font_style=1)
-sass_string = Attribute("SASS_STRING", string)
-sass_directive = Attribute("SASS_DIRECTIVE", keyword, foreground=(0, 0, 255))
-sass_mixin = Attribute("SASS_MIXIN", keyword, foreground=(0, 128, 128))
-sass_comment = Attribute("SASS_COMMENT", line_comment)
-sass_number = Attribute("SASS_NUMBER", number)
+sass_rule = Attribute("SASS_RULE", keyword, scope='entity.other.attribute-name.id.sass')
+sass_variable = Attribute("SASS_VARIABLE", text, scope='variable.parameter.sass')
+sass_comment = Attribute("SASS_COMMENT", block_comment, scope='comment.block.sass')
+sass_attribute = Attribute("SASS_ATTRIBUTE", keyword, scope='support.type.property-name.sass')
+sass_constant = Attribute("SASS_CONSTANT", keyword, scope='variable.parameter.sass')
+sass_string = Attribute("SASS_STRING", string, scope='string.quoted.double.sass')
+sass_directive = Attribute("SASS_DIRECTIVE", keyword, scope='keyword.control.at-rule.sass')
+sass_mixin = Attribute("SASS_MIXIN", keyword, scope='entity.other.attribute-name.tag')
+sass_number = Attribute("SASS_NUMBER", number, scope='constant.numeric.sass')
+sass_identifier = Attribute("SASS_IDENTIFIER", number, scope='support.constant.property-value.sass')
 
 # JS
 js_keyword = Attribute("JS.KEYWORD", keyword)
