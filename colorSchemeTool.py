@@ -4,6 +4,7 @@ import xml.etree.cElementTree as ET
 import plistlib
 import os.path
 import sys
+import re
 
 default_attributes = {}
 all_attributes = []
@@ -595,9 +596,19 @@ def load_textmate_scheme(tmtheme):
                 attr.value = attr_from_textmate(settings['settings'], attr.value)
     return all_settings, used_scopes
 
+
+def underscore_to_camelcase(value):
+    def camelcase():
+        yield str.lower
+        while True:
+            yield str.capitalize
+
+    c = camelcase()
+    return "".join(c.next()(x) if x else '_' for x in value.split("_"))
+
 def write_idea_scheme(filename):
     name, ext = os.path.splitext(os.path.basename(filename))
-    scheme = ET.Element("scheme", name=name, version="1", parent_scheme="Default")
+    scheme = ET.Element("scheme", name=underscore_to_camelcase(name), version="1", parent_scheme="Default")
     ET.SubElement(scheme, 'option', name='LINE_SPACING', value='1.0')
     ET.SubElement(scheme, 'option', name='EDITOR_FONT_SIZE', value='12')
     ET.SubElement(scheme, 'option', name='EDITOR_FONT_NAME', value='Monaco')
