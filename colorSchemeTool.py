@@ -695,7 +695,6 @@ def load_textmate_scheme(tmtheme):
 
 def underscore_to_camelcase(value):
     def camelcase():
-        yield str.lower
         while True:
             yield str.capitalize
 
