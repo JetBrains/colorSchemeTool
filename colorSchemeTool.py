@@ -138,6 +138,10 @@ class Attribute:
         self.scope = scope
         if default_attributes.has_key(id):
             self.value = default_attributes[id]
+            if background == IGNORE_COLOR:
+                self.value.default_back = IGNORE_COLOR_VALUE
+            if foreground == IGNORE_COLOR:
+                self.value.default_fore = IGNORE_COLOR_VALUE
             self.value.parent = parent
         else:
             self.value = DerivedAttributeValue(parent=parent)
