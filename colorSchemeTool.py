@@ -538,7 +538,13 @@ def attr_from_textmate(settings, old_value):
     return result
 
 def find_by_scope(settings, scope):
+    # compound scope
     less_specific = None
+    less_specific_weight = 0
+    less_specific_selector_size = 0
+    # simple scope (without whitespaces and '-')
+    ss_less_specific = None
+    ss_less_specific_weight = 0
     for setting in settings:
         scope_of_setting = setting.get('scope', None)
         if scope_of_setting is None:
@@ -547,13 +553,56 @@ def find_by_scope(settings, scope):
             scopes_of_setting = scope_of_setting.split(",")
             for aScope in scopes_of_setting:
                 aScope = aScope.strip()
-                chain = aScope.split(' ')
-                aScope = chain[-1]
-                if aScope.startswith(scope):
-                    return setting
-                if scope.startswith(aScope):
+
+                # ignore excludes in scopes selectors,
+                # more accurate parsing/matching required!
+                chain_without_excludes = aScope.split(' -')[0]
+                aScope_selectors = chain_without_excludes.split(' ')
+
+                # We need:
+                # 1. "Match the element deepest down in the scope e.g. string wins over source.php when the scope is source.php string.quoted."
+                # it is very simple implementation of above rule
+                matchingScope = aScope_selectors[-1]
+                if matchingScope is None:
+                    continue
+
+                # Consider scope size as scope size until first not excluded element
+                aScopeSelectorSize = 0
+                for i in range(0, len(aScope_selectors)):
+                    aScopeSelectorSize = len(aScope_selectors[i].strip())
+                isSimpleScope = (aScopeSelectorSize == 0)
+
+                if matchingScope == scope:
+                    if isSimpleScope:
+                      return setting
                     less_specific = setting
-    return less_specific
+                    less_specific_weight = len(matchingScope)
+                    less_specific_selector_size = aScopeSelectorSize
+                if scope.startswith(matchingScope):
+                    # We need:
+                    # 2.  "Match most of the deepest element e.g. string.quoted wins over string."
+                    # so let's consider matched symbols count as weight
+                    new_match_weight = len(matchingScope)
+                    weight = ss_less_specific_weight if isSimpleScope else less_specific_weight
+                    if new_match_weight > weight:
+                        if isSimpleScope:
+                            ss_less_specific = setting
+                            ss_less_specific_weight = new_match_weight
+                        else:
+                            less_specific = setting
+                            less_specific_weight = new_match_weight
+                            less_specific_selector_size = aScopeSelectorSize
+                    else:
+                        # if matched part is equal and scope isn't simple - let's choose the shortest scope
+                        # in general case should work better, because some where particular complicated
+                        # scope won't override similar but more general scope
+                        if not isSimpleScope and (new_match_weight == weight):
+                            if less_specific_selector_size > aScopeSelectorSize:
+                                less_specific = setting
+                                less_specific_weight = new_match_weight
+                                less_specific_selector_size = aScopeSelectorSize
+
+    return ss_less_specific if (ss_less_specific is not None) else less_specific
 
 def load_textmate_scheme(tmtheme):
     themeDict = plistlib.readPlist(tmtheme)
@@ -596,6 +645,8 @@ def load_textmate_scheme(tmtheme):
                     print "converting attribute " + attr.id + " from TextMate scope " + the_scope
                     used_scopes.add(the_scope)
                 attr.value = attr_from_textmate(settings['settings'], attr.value)
+            else:
+               print "[!] scope not found: " + attr.scope
     return all_settings, used_scopes
 
 
