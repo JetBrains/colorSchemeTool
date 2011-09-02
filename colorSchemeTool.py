@@ -419,12 +419,13 @@ js_instance_member_func = Attribute("JS.INSTANCE_MEMBER_FUNCTION", text, foregro
 js_attr = Attribute("JS.ATTRIBUTE", text, background=(0xf7, 0xe9, 0xe9))
 
 # YAML
-yaml_scalar_key = Attribute("YAML_SCALAR_KEY", keyword)
-yaml_scalar_value = Attribute("YAML_SCALAR_VALUE", text)
-yaml_scalar_string = Attribute("YAML_SCALAR_STRING", text, foreground=(0, 128, 128), font_style=1)
-yaml_scalar_dstring = Attribute("YAML_SCALAR_DSTRING", text, foreground=(0, 128, 0), font_style=1)
-yaml_scalar_list = Attribute("YAML_SCALAR_LIST", text, background=(218, 233, 246))
-yaml_text = Attribute("YAML_TEXT", text)
+yaml_comment = Attribute("YAML_COMMENT", line_comment, scope="comment.line.number-sign.yaml")
+yaml_scalar_key = Attribute("YAML_SCALAR_KEY", keyword, scope="entity.name.tag.yaml")
+yaml_scalar_value = Attribute("YAML_SCALAR_VALUE", text, scope="string.unquoted.block.yaml")
+yaml_scalar_string = Attribute("YAML_SCALAR_STRING", text, scope="string.quoted.single.yaml")
+yaml_scalar_dstring = Attribute("YAML_SCALAR_DSTRING", text, scope="string.quoted.double.yaml")
+yaml_scalar_list = Attribute("YAML_SCALAR_LIST", text, scope="string.unquoted.block.yaml")
+yaml_text = Attribute("YAML_TEXT", text, scope="string.unquoted.yaml")
 yaml_sign = Attribute("YAML_SIGN", opSign)
 
 
