@@ -711,6 +711,10 @@ def write_idea_scheme(filename):
     for name, value in all_colors.iteritems():
         ET.SubElement(colors, 'option', name=name, value=value)
     attributes = ET.SubElement(scheme, 'attributes')
+
+    # let's sort attributes, then diffs between generated schemes will look nice
+    all_attributes.sort(key=lambda attr: attr.id)
+
     for attr in all_attributes:
         if attr.value.inherited:
             print 'inheriting ' + attr.id + ' from ' + attr.parent.id
