@@ -611,7 +611,7 @@ def find_by_scope(settings, scope):
 
                 # Consider scope size as scope size until first not excluded element
                 aScopeSelectorSize = 0
-                for i in range(0, len(aScope_selectors)):
+                for i in range(0, len(aScope_selectors) - 1):
                     aScopeSelectorSize = len(aScope_selectors[i].strip())
                 isSimpleScope = (aScopeSelectorSize == 0)
 
