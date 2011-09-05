@@ -175,7 +175,7 @@ def load_default_attributes(scheme_path):
             if option_name == 'ERROR_STRIPE_COLOR': attr_value.error_stripe = option_value
             if option_name == 'EFFECT_TYPE': attr_value.effect_type = int(option_value)
             if option_name == 'EFFECT_COLOR': attr_value.default_effect_color = option_value
-            default_attributes[name] = attr_value
+        default_attributes[name] = attr_value
 
 load_default_attributes('DefaultColorSchemesManager.xml')
 
@@ -199,6 +199,13 @@ for id in ["FOLDED_TEXT_ATTRIBUTES",
            "CONSOLE_NORMAL_OUTPUT",                   # ConsoleViewContentType
            "CONSOLE_ERROR_OUTPUT", 
            "CONSOLE_USER_INPUT",
+           "CONSOLE_RED_OUTPUT",
+           "CONSOLE_GREEN_OUTPUT",
+           "CONSOLE_YELLOW_OUTPUT",
+           "CONSOLE_BLUE_OUTPUT",
+           "CONSOLE_MAGENTA_OUTPUT",
+           "CONSOLE_CYAN_OUTPUT",
+           "CONSOLE_GRAY_OUTPUT",
            "CONSOLE_SYSTEM_OUTPUT",
            "DIFF_MODIFIED",                           # DiffColors
            "DIFF_DELETED",
