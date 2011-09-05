@@ -29,9 +29,10 @@ def indent(elem, level=0):
             elem.tail = i
 
 def hex_to_rgb(color):
-    r = int(color[0:2], 16) / 256
-    g = int(color[2:4], 16) / 256 if len(color) >= 4 else 0
-    b = int(color[4:6], 16) / 256 if len(color) >= 6 else 0
+    l = len(color)
+    r = int(color[l-6:l-4], 16) / 256 if l >= 6 else 0
+    g = int(color[l-4:l-2], 16) / 256 if l >= 4 else 0
+    b = int(color[l-2:l], 16) / 256
     return r, g, b
 
 def hex_to_yiq(color):
