@@ -207,6 +207,8 @@ for id in ["FOLDED_TEXT_ATTRIBUTES",
 
 # HighlighterColors
 bad_character = Attribute("BAD_CHARACTER", text, scope='invalid')
+matched_brace = Attribute("MATCHED_BRACE_ATTRIBUTES", text, background=(153, 204, 255))
+unmatched_brace = Attribute("UNMATCHED_BRACE_ATTRIBUTES", text, background=(255, 220, 220))
 
 # CodeInsightColors
 local_variable = Attribute("LOCAL_VARIABLE_ATTRIBUTES", text)
