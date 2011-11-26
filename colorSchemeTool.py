@@ -629,7 +629,7 @@ def write_idea_scheme(filename):
         if attr.value.error_stripe:
             ET.SubElement(value, 'option', name='ERROR_STRIPE_COLOR', value=attr.value.error_stripe)
     indent(scheme)
-    ET.ElementTree(scheme).write(filename)
+    ET.ElementTree(scheme).write(open(filename, "w+"))
 
 if len(sys.argv) != 3:
     print 'Usage: colorSchemeTool <TextMate scheme> <IDEA/PyCharm/RubyMine scheme>'
