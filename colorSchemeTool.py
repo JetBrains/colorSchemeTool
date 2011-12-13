@@ -474,9 +474,11 @@ rb_paramdef = Attribute("RUBY_PARAMDEF_CALL", rb_identifier, scope='support.func
 
 # HAML
 haml_text = Attribute("HAML_TEXT", text, scope='text.haml')
-haml_tag_name = Attribute("HAML_TAG", haml_text, scope='meta.tag.haml')
 haml_class = Attribute("HAML_CLASS", haml_text, scope='entity.name.tag.class.haml')
 haml_id = Attribute("HAML_ID", haml_text, scope='entity.name.tag.id.haml')
+haml_tag = Attribute("HAML_TAG", haml_text, scope='punctuation.definition.tag.haml')
+haml_tag_name = Attribute("HAML_TAG_NAME", haml_class, scope='meta.tag.haml')
+haml_tag_attribute_name = Attribute("TAG_ATTR_KEY", haml_text, scope='entity.other.attribute-name.html')
 haml_comment = Attribute("HAML_COMMENT", line_comment, scope='comment.line.slash.haml')
 haml_xhtml = Attribute("HAML_XHTML", haml_text, scope='meta.prolog.haml')
 haml_code_injection = Attribute("HAML_RUBY_CODE", haml_text, scope='source.ruby.embedded.haml', foreground=IGNORE_COLOR)
@@ -484,6 +486,10 @@ haml_ruby_evaluator = Attribute("HAML_RUBY_START", haml_text, scope='meta.line.r
 haml_line_continuation = Attribute("HAML_LINE_CONTINUATION", haml_text)
 haml_filter = Attribute("HAML_FILTER", haml_text)
 haml_filter_content = Attribute("HAML_FILTER_CONTENT", haml_text)
+haml_string = Attribute("HAML_STRING", string, scope="string.quoted.single.haml")
+haml_string_interpolated = Attribute("HAML_STRING_INTERPOLATED", string, scope="string.quoted.double.haml")
+haml_parenths = Attribute("HAML_PARENTHS", parenths)
+haml_ws_removal = Attribute("HAML_WS_REMOVAL", haml_text, scope='punctuation')
 
 # Cucumber (Gherkin)
 cucumber_text = Attribute("GHERKIN_TEXT", text, scope='text.gherkin.feature')
