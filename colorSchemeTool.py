@@ -514,6 +514,8 @@ coffee_comma = Attribute("COFFEESCRIPT.COMMA", comma, scope='meta.delimiter.obje
 coffee_dot = Attribute("COFFEESCRIPT.DOT", dot, scope='meta.delimiter.method.period.coffee')
 coffee_class = Attribute("COFFEESCRIPT.CLASS_NAME", text, scope='entity.name.function.coffee')
 coffee_identifier = Attribute("COFFEESCRIPT.IDENTIFIER", text, scope='source.coffee', background=IGNORE_COLOR)
+coffee_local_var = Attribute("COFFEESCRIPT.LOCAL_VARIABLE", coffee_identifier)
+coffee_global_var = Attribute("COFFEESCRIPT.GLOBAL_VARIABLE", coffee_identifier, scope='variable.other.readwrite.global')
 coffee_function_name = Attribute("COFFEESCRIPT.FUNCTION_NAME", text, scope='entity.name.function.coffee')
 coffee_obj_key = Attribute("COFFEESCRIPT.OBJECT_KEY", text, scope='variable.assignment.coffee')
 coffee_number = Attribute("COFFEESCRIPT.NUMBER", number, scope='constant.numeric.coffee')
