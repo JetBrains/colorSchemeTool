@@ -385,6 +385,9 @@ css_url = Attribute("CSS.URL", html_attribute_value, scope='variable.parameter.m
 
 # LESS
 less_variable = Attribute("LESS_VARIABLE", text, scope='variable.other.less')
+less_code_injection_delim = Attribute("LESS_JS_CODE_DELIM", text, scope='source.css.less')
+less_code_injection = Attribute("LESS_INJECTED_CODE", text, scope='source.js.embedded.less', foreground=IGNORE_COLOR)
+
 
 # SASS
 sass_rule = Attribute("SASS_RULE", keyword, scope='entity.other.attribute-name.id.sass')
