@@ -191,6 +191,13 @@ for id in ["FOLDED_TEXT_ATTRIBUTES",
            "CONSOLE_NORMAL_OUTPUT",                   # ConsoleViewContentType
            "CONSOLE_ERROR_OUTPUT", 
            "CONSOLE_USER_INPUT",
+           "CONSOLE_RED_OUTPUT",
+           "CONSOLE_GREEN_OUTPUT",
+           "CONSOLE_YELLOW_OUTPUT",
+           "CONSOLE_BLUE_OUTPUT",
+           "CONSOLE_MAGENTA_OUTPUT",
+           "CONSOLE_CYAN_OUTPUT",
+           "CONSOLE_GRAY_OUTPUT",
            "CONSOLE_SYSTEM_OUTPUT",
            "DIFF_MODIFIED",                           # DiffColors
            "DIFF_DELETED",
@@ -241,23 +248,23 @@ doc_comment_markup = Attribute("JAVA_DOC_MARKUP", text)
 # XmlHighlighterColors
 xml_prologue = Attribute("XML_PROLOGUE", text)
 xml_comment = Attribute("XML_COMMENT", block_comment)
-xml_tag = Attribute("XML_TAG", text, scope='meta.tag')
-xml_tag_name = Attribute("XML_TAG_NAME", text, scope='entity.name.tag')
-xml_attribute_name = Attribute("XML_ATTRIBUTE_NAME", text, scope='entity.other.attribute-name')
+xml_tag = Attribute("XML_TAG", text, scope='punctuation.definition.tag')
+xml_attribute_name = Attribute("XML_ATTRIBUTE_NAME", text, scope='entity.other.attribute-name.localname.xml')
+xml_tag_name = Attribute("XML_TAG_NAME", text, scope='meta.tag.xml')
 xml_attribute_value = Attribute("XML_ATTRIBUTE_VALUE", text, scope='string.quoted.double')
 xml_tag_data = Attribute("XML_TAG_DATA", text)
 xml_entity_reference = Attribute("XML_ENTITY_REFERENCE", text, scope='constant.character.entity')
 
-html_comment = Attribute("HTML_COMMENT", xml_comment)
-html_tag = Attribute("HTML_TAG", xml_tag)
-html_tag_name = Attribute("HTML_TAG_NAME", xml_tag_name)
-html_attribute_name = Attribute("HTML_ATTRIBUTE_NAME", xml_attribute_name)
+html_comment = Attribute("HTML_COMMENT", xml_comment, scope='comment.block.html')
+html_tag = Attribute("HTML_TAG", xml_tag, scope='punctuation.definition.tag')
+html_tag_name = Attribute("HTML_TAG_NAME", xml_tag_name, scope="meta.tag")
+html_attribute_name = Attribute("HTML_ATTRIBUTE_NAME", xml_attribute_name, scope="entity.other.attribute-name.html")
 html_attribute_value = Attribute("HTML_ATTRIBUTE_VALUE", xml_attribute_value)
 html_entity_reference = Attribute("HTML_ENTITY_REFERENCE", xml_entity_reference)
 
 # PyHighlighter
-py_keyword = Attribute("PY.KEYWORD", keyword)
-py_string = Attribute("PY.STRING", string)
+py_keyword = Attribute("PY.KEYWORD", keyword, scope="storage.type")
+py_string = Attribute("PY.STRING", string, 'string.quoted')
 py_number = Attribute("PY.NUMBER", number)
 py_comment = Attribute("PY.LINE_COMMENT", line_comment)
 py_opSign = Attribute("PY.OPERATION_SIGN", opSign)
@@ -359,29 +366,31 @@ rx_quote_character = Attribute("REGEXP.QUOTE_CHARACTER", valid_string_escape)
 rx_comment = Attribute("REGEXP.COMMENT", line_comment)
 
 # CSS
-css_ident = Attribute("CSS.IDENT", html_tag_name, scope='meta.selector.css')
-css_comment = Attribute("CSS.COMMENT", html_comment)
+css_ident = Attribute("CSS.IDENT", html_tag_name, scope='entity.other.attribute-name.class.css')
+css_comment = Attribute("CSS.COMMENT", html_comment, scope='comment.block.css')
 css_property_name = Attribute("CSS.PROPERTY_NAME", html_attribute_name, scope='support.type.property-name')
-css_property_value = Attribute("CSS.PROPERTY_VALUE", html_attribute_value)
-css_tag_name = Attribute("CSS.TAG_NAME", html_tag_name)
+css_property_value = Attribute("CSS.PROPERTY_VALUE", html_attribute_value, scope='meta.property-value.css')
+css_tag_name = Attribute("CSS.TAG_NAME", html_tag_name, scope='entity.name.tag.css')
 css_string = Attribute("CSS.STRING", string)
 css_number = Attribute("CSS.NUMBER", number, scope='constant.numeric.css')
 css_keyword = Attribute("CSS.KEYWORD", keyword)
-css_function = Attribute("CSS.FUNCTION", html_tag_name)
-css_url = Attribute("CSS.URL", html_attribute_value)
+css_function = Attribute("CSS.FUNCTION", html_tag_name, scope='support.function.misc.css')
+css_url = Attribute("CSS.URL", html_attribute_value, scope='variable.parameter.misc.css')
 
 # LESS
-less_variable = Attribute("LESS_VARIABLE", text, foreground=(104, 12, 122), font_style=1)
+less_variable = Attribute("LESS_VARIABLE", text, scope='variable.other.less')
 
 # SASS
-sass_rule = Attribute("SASS_RULE", keyword)
-sass_attribute = Attribute("SASS_ATTRIBUTE", keyword)
-sass_constant = Attribute("SASS_CONSTANT", keyword, scope='constant', foreground=(128, 0, 128), font_style=1)
-sass_string = Attribute("SASS_STRING", string)
-sass_directive = Attribute("SASS_DIRECTIVE", keyword, foreground=(0, 0, 255))
-sass_mixin = Attribute("SASS_MIXIN", keyword, foreground=(0, 128, 128))
-sass_comment = Attribute("SASS_COMMENT", line_comment)
-sass_number = Attribute("SASS_NUMBER", number)
+sass_rule = Attribute("SASS_RULE", keyword, scope='entity.other.attribute-name.id.sass')
+sass_variable = Attribute("SASS_VARIABLE", text, scope='variable.parameter.sass')
+sass_comment = Attribute("SASS_COMMENT", block_comment, scope='comment.block.sass')
+sass_attribute = Attribute("SASS_ATTRIBUTE", keyword, scope='support.type.property-name.sass')
+sass_constant = Attribute("SASS_CONSTANT", keyword, scope='variable.parameter.sass')
+sass_string = Attribute("SASS_STRING", string, scope='string.quoted.double.sass')
+sass_directive = Attribute("SASS_DIRECTIVE", keyword, scope='keyword.control.at-rule.sass')
+sass_mixin = Attribute("SASS_MIXIN", keyword, scope='entity.other.attribute-name.tag')
+sass_number = Attribute("SASS_NUMBER", number, scope='constant.numeric.sass')
+sass_identifier = Attribute("SASS_IDENTIFIER", number, scope='support.constant.property-value.sass')
 
 # JS
 js_keyword = Attribute("JS.KEYWORD", keyword)
@@ -465,21 +474,24 @@ ac_arg_lexem = Attribute("APACHE_CONFIG.ARG_LEXEM", string)
 ac_identifier = Attribute("APACHE_CONFIG.IDENTIFIER", keyword)
 
 # YAML
-yaml_scalar_key = Attribute("YAML_SCALAR_KEY", keyword)
-yaml_scalar_value = Attribute("YAML_SCALAR_VALUE", text)
-yaml_scalar_string = Attribute("YAML_SCALAR_STRING", text, foreground=(0, 128, 128), font_style=1)
-yaml_scalar_dstring = Attribute("YAML_SCALAR_DSTRING", text, foreground=(0, 128, 0), font_style=1)
-yaml_scalar_list = Attribute("YAML_SCALAR_LIST", text, background=(218, 233, 246))
-yaml_text = Attribute("YAML_TEXT", text)
+yaml_comment = Attribute("YAML_COMMENT", line_comment, scope="comment.line.number-sign.yaml")
+yaml_scalar_key = Attribute("YAML_SCALAR_KEY", keyword, scope="entity.name.tag.yaml")
+yaml_scalar_value = Attribute("YAML_SCALAR_VALUE", text, scope="string.unquoted.block.yaml")
+yaml_scalar_string = Attribute("YAML_SCALAR_STRING", text, scope="string.quoted.single.yaml")
+yaml_scalar_dstring = Attribute("YAML_SCALAR_DSTRING", text, scope="string.quoted.double.yaml")
+yaml_scalar_list = Attribute("YAML_SCALAR_LIST", text, scope="string.unquoted.block.yaml")
+yaml_text = Attribute("YAML_TEXT", text, scope="string.unquoted.yaml")
 yaml_sign = Attribute("YAML_SIGN", opSign)
 
 
 # RubyHighlighter
 rb_keyword = Attribute("RUBY_KEYWORD", keyword)
 rb_comment = Attribute("RUBY_COMMENT", line_comment)
-rb_heredoc_id = Attribute("RUBY_HEREDOC_ID", text, scope="string.quoted.double.ruby")
+rb_heredoc_id = Attribute("RUBY_HEREDOC_ID", string, scope="punctuation.definition.string.begin.ruby")
+rb_heredoc = Attribute("RUBY_HEREDOC_CONTENT", string, scope='string.unquoted.heredoc.ruby')
 rb_number = Attribute("RUBY_NUMBER", number)
-rb_string = Attribute("RUBY_STRING", string)
+rb_string = Attribute("RUBY_STRING", string, scope="string.quoted.double.ruby")
+rb_words = Attribute("RUBY_WORDS", string, scope= "string.quoted.other.literal.upper.ruby")
 rb_escape_sequence = Attribute("RUBY_ESCAPE_SEQUENCE", valid_string_escape)
 rb_invalid_escape_sequence = Attribute("RUBY_INVALID_ESCAPE_SEQUENCE", invalid_string_escape)
 rb_opSign = Attribute("RUBY_OPERATION_SIGN", opSign)
@@ -487,11 +499,10 @@ rb_brackets = Attribute("RUBY_BRACKETS", brackets)
 rb_expr_in_string = Attribute("RUBY_EXPR_IN_STRING", string, scope='string source')
 rb_bad_character = Attribute("RUBY_BAD_CHARACTER", text, scope='invalid')
 rb_regexp = Attribute("RUBY_REGEXP", string, scope='string.regexp')
-rb_words = Attribute("RUBY_WORDS", string)
-rb_heredoc = Attribute("RUBY_HEREDOC_CONTENT", string, scope='string.unquoted')
 rb_identifier = Attribute("RUBY_IDENTIFIER", text, scope='variable')
 rb_method_name = Attribute("RUBY_METHOD_NAME", rb_identifier, scope='entity.name.function')
 rb_constant = Attribute("RUBY_CONSTANT", rb_identifier, scope='constant')
+rb_constant_decl = Attribute("RUBY_CONSTANT_DECLARATION", rb_identifier, scope='entity.name.type.class.ruby')
 rb_gvar = Attribute("RUBY_GVAR", rb_identifier, scope='variable.other.readwrite.global')
 rb_cvar = Attribute("RUBY_CVAR", rb_identifier, scope='variable.other.readwrite.class')
 rb_ivar = Attribute("RUBY_IVAR", rb_identifier, scope='variable.other.readwrite.instance')
@@ -520,19 +531,14 @@ haml_filter = Attribute("HAML_FILTER", haml_text)
 haml_filter_content = Attribute("HAML_FILTER_CONTENT", haml_text)
 
 # Cucumber (Gherkin)
-cucumber_text = Attribute("GHERKIN_TEXT", text, scope='text.cucumber.feature')
-cucumber_text = Attribute("GHERKIN_COMMENT", line_comment, scope='comment.line.number-sign')
-cucumber_text = Attribute("GHERKIN_KEYWORD", keyword, scope='keyword.language.cucumber.feature')
-#cucumber_text = Attribute("GHERKIN_KEYWORD_PENDING", cucumber_text, scope='keyword.language.cucumber.feature.scenario.pending.line')
-#cucumber_text = Attribute("GHERKIN_KEYWORD_EXAMPLES", cucumber_text, scope='keyword.language.cucumber.feature.scenario.line')
-#cucumber_text = Attribute("GHERKIN_KEYWORD_FEATURE", cucumber_text, scope='keyword.language.cucumber.feature')
-#cucumber_text = Attribute("GHERKIN_KEYWORD_SCENARIO", cucumber_text, scope='keyword.language.cucumber.feature.scenario')
-#cucumber_text = Attribute("GHERKIN_KEYWORD_SCENARIO_OUTLINE", cucumber_text, scope='keyword.language.cucumber.feature.scenario_outline')
-cucumber_text = Attribute("GHERKIN_TAG", cucumber_text, scope='storage.type.tag.cucumber')
-cucumber_text = Attribute("GHERKIN_PYSTRING", string, scope='string.quoted.single')
+cucumber_text = Attribute("GHERKIN_TEXT", text, scope='text.gherkin.feature')
+cucumber_comment = Attribute("GHERKIN_COMMENT", line_comment, scope='comment.line.number-sign')
+cucumber_keyword = Attribute("GHERKIN_KEYWORD", keyword, scope='keyword.language.gherkin.feature')
+cucumber_tag = Attribute("GHERKIN_TAG", cucumber_text, scope='storage.type.tag.cucumber')
+cucumber_pystring = Attribute("GHERKIN_PYSTRING", string, scope='string.quoted.single')
 cucumber_table_header = Attribute("GHERKIN_TABLE_HEADER_CELL", cucumber_text, scope='variable.other')
-cucumber_table_cell = Attribute("GHERKIN_TABLE_CELL", cucumber_text, scope='source.cucumber')
-cucumber_table_pipe = Attribute("PIPE", semicolon, scope='keyword.control.cucumber.table')
+cucumber_table_cell = Attribute("GHERKIN_TABLE_CELL", cucumber_text)
+cucumber_table_pipe = Attribute("GHERKIN_TABLE_PIPE", semicolon, scope='keyword.control.cucumber.table')
 cucumber_outline_param_substitution = Attribute("GHERKIN_OUTLINE_PARAMETER_SUBSTITUTION", cucumber_text, scope='variable.other')
 cucumber_scenario_regexp_param = Attribute("GHERKIN_REGEXP_PARAMETER", cucumber_text, scope='string.quoted.double')
 
