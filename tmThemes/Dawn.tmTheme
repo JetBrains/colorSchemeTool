@@ -25,6 +25,10 @@
 				<string>#2463B41F</string>
 				<key>selection</key>
 				<string>#275FFF4D</string>
+				<key>shadow</key>
+				<string>#808080</string>
+				<key>shadowWidth</key>
+				<string>6</string>
 			</dict>
 		</dict>
 		<dict>
