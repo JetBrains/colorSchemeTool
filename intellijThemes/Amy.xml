@@ -3,12 +3,14 @@
   <option name="EDITOR_FONT_SIZE" value="12" />
   <option name="EDITOR_FONT_NAME" value="Monaco" />
   <colors>
+    <option name="INDENT_GUIDE" value="BFBFBF" />
     <option name="SELECTION_BACKGROUND" value="500010" />
     <option name="CARET_ROW_COLOR" value="380018" />
     <option name="WHITESPACES" value="BFBFBF" />
     <option name="CARET_COLOR" value="7070FF" />
-    <option name="INDENT_GUIDE" value="BFBFBF" />
+    <option name="LINE_NUMBERS_COLOR" value="D0D0FF" />
     <option name="CONSOLE_BACKGROUND_KEY" value="200020" />
+    <option name="GUTTER_BACKGROUND" value="200020" />
   </colors>
   <attributes>
     <option name="TEXT">
@@ -143,6 +145,27 @@
         <option name="FOREGROUND" value="6ae96a" />
         <option name="FONT_TYPE" value="2" />
       </value>
+    </option>
+    <option name="CONSOLE_RED_OUTPUT">
+      <value />
+    </option>
+    <option name="CONSOLE_GREEN_OUTPUT">
+      <value />
+    </option>
+    <option name="CONSOLE_YELLOW_OUTPUT">
+      <value />
+    </option>
+    <option name="CONSOLE_BLUE_OUTPUT">
+      <value />
+    </option>
+    <option name="CONSOLE_MAGENTA_OUTPUT">
+      <value />
+    </option>
+    <option name="CONSOLE_CYAN_OUTPUT">
+      <value />
+    </option>
+    <option name="CONSOLE_GRAY_OUTPUT">
+      <value />
     </option>
     <option name="CONSOLE_SYSTEM_OUTPUT">
       <value>
@@ -361,16 +384,17 @@
     </option>
     <option name="XML_TAG">
       <value>
-        <option name="BACKGROUND" value="373737" />
-      </value>
-    </option>
-    <option name="XML_TAG_NAME">
-      <value>
-        <option name="FOREGROUND" value="009090" />
+        <option name="FOREGROUND" value="805080" />
       </value>
     </option>
     <option name="XML_ATTRIBUTE_NAME">
       <value />
+    </option>
+    <option name="XML_TAG_NAME">
+      <value>
+        <option name="FOREGROUND" value="ffb3b3" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
     </option>
     <option name="XML_ATTRIBUTE_VALUE">
       <value>
@@ -389,26 +413,24 @@
     </option>
     <option name="HTML_COMMENT">
       <value>
-        <option name="FOREGROUND" value="80807f" />
+        <option name="FOREGROUND" value="404080" />
         <option name="BACKGROUND" value="200020" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="HTML_TAG">
       <value>
-        <option name="BACKGROUND" value="373737" />
+        <option name="FOREGROUND" value="805080" />
       </value>
     </option>
     <option name="HTML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="009090" />
+        <option name="FOREGROUND" value="ffb3b3" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="HTML_ATTRIBUTE_NAME">
-      <value>
-        <option name="FONT_TYPE" value="1" />
-      </value>
+      <value />
     </option>
     <option name="HTML_ATTRIBUTE_VALUE">
       <value>
@@ -424,7 +446,8 @@
     </option>
     <option name="PY.KEYWORD">
       <value>
-        <option name="FOREGROUND" value="A080FF" />
+        <option name="FOREGROUND" value="60B0FF" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="PY.STRING">
@@ -514,14 +537,15 @@
     </option>
     <option name="DJANGO_COMMENT">
       <value>
-        <option name="FOREGROUND" value="80807f" />
+        <option name="FOREGROUND" value="404080" />
         <option name="BACKGROUND" value="200020" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="DJANGO_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="009090" />
+        <option name="FOREGROUND" value="ffb3b3" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DJANGO_ID">
@@ -843,14 +867,11 @@
       </value>
     </option>
     <option name="CSS.IDENT">
-      <value>
-        <option name="FOREGROUND" value="ffb3b3" />
-        <option name="FONT_TYPE" value="1" />
-      </value>
+      <value />
     </option>
     <option name="CSS.COMMENT">
       <value>
-        <option name="FOREGROUND" value="80807f" />
+        <option name="FOREGROUND" value="404080" />
         <option name="BACKGROUND" value="200020" />
         <option name="FONT_TYPE" value="2" />
       </value>
@@ -866,8 +887,7 @@
     </option>
     <option name="CSS.TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="ffb3b3" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="009090" />
       </value>
     </option>
     <option name="CSS.STRING">
@@ -897,29 +917,35 @@
     </option>
     <option name="CSS.URL">
       <value>
-        <option name="FOREGROUND" value="ffb3b3" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="80B0B0" />
       </value>
     </option>
     <option name="LESS_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="ffa4ff" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="008080" />
       </value>
     </option>
     <option name="SASS_RULE">
+      <value />
+    </option>
+    <option name="SASS_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="A080FF" />
+        <option name="FOREGROUND" value="80B0B0" />
+      </value>
+    </option>
+    <option name="SASS_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="404080" />
+        <option name="BACKGROUND" value="200020" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="SASS_ATTRIBUTE">
-      <value>
-        <option name="FOREGROUND" value="A080FF" />
-      </value>
+      <value />
     </option>
     <option name="SASS_CONSTANT">
       <value>
-        <option name="FOREGROUND" value="707090" />
+        <option name="FOREGROUND" value="80B0B0" />
       </value>
     </option>
     <option name="SASS_STRING">
@@ -929,23 +955,20 @@
     </option>
     <option name="SASS_DIRECTIVE">
       <value>
-        <option name="FOREGROUND" value="A080FF" />
+        <option name="FOREGROUND" value="80A0FF" />
       </value>
     </option>
     <option name="SASS_MIXIN">
-      <value>
-        <option name="FOREGROUND" value="A080FF" />
-      </value>
-    </option>
-    <option name="SASS_COMMENT">
-      <value>
-        <option name="FOREGROUND" value="80807f" />
-        <option name="FONT_TYPE" value="2" />
-      </value>
+      <value />
     </option>
     <option name="SASS_NUMBER">
       <value>
         <option name="FOREGROUND" value="7090B0" />
+      </value>
+    </option>
+    <option name="SASS_IDENTIFIER">
+      <value>
+        <option name="BACKGROUND" value="200020" />
       </value>
     </option>
     <option name="JS.KEYWORD">
@@ -1312,33 +1335,41 @@
         <option name="FOREGROUND" value="A080FF" />
       </value>
     </option>
+    <option name="YAML_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="80807f" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
     <option name="YAML_SCALAR_KEY">
       <value>
-        <option name="FOREGROUND" value="A080FF" />
+        <option name="FOREGROUND" value="009090" />
       </value>
     </option>
     <option name="YAML_SCALAR_VALUE">
-      <value />
+      <value>
+        <option name="FOREGROUND" value="999999" />
+      </value>
     </option>
     <option name="YAML_SCALAR_STRING">
       <value>
-        <option name="FOREGROUND" value="4ccccc" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="999999" />
       </value>
     </option>
     <option name="YAML_SCALAR_DSTRING">
       <value>
-        <option name="FOREGROUND" value="68e868" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="999999" />
       </value>
     </option>
     <option name="YAML_SCALAR_LIST">
       <value>
-        <option name="BACKGROUND" value="344350" />
+        <option name="FOREGROUND" value="999999" />
       </value>
     </option>
     <option name="YAML_TEXT">
-      <value />
+      <value>
+        <option name="FOREGROUND" value="999999" />
+      </value>
     </option>
     <option name="YAML_SIGN">
       <value>
@@ -1358,6 +1389,11 @@
     </option>
     <option name="RUBY_HEREDOC_ID">
       <value>
+        <option name="FOREGROUND" value="805080" />
+      </value>
+    </option>
+    <option name="RUBY_HEREDOC_CONTENT">
+      <value>
         <option name="FOREGROUND" value="999999" />
       </value>
     </option>
@@ -1367,6 +1403,11 @@
       </value>
     </option>
     <option name="RUBY_STRING">
+      <value>
+        <option name="FOREGROUND" value="999999" />
+      </value>
+    </option>
+    <option name="RUBY_WORDS">
       <value>
         <option name="FOREGROUND" value="999999" />
       </value>
@@ -1408,16 +1449,6 @@
         <option name="FOREGROUND" value="999999" />
       </value>
     </option>
-    <option name="RUBY_WORDS">
-      <value>
-        <option name="FOREGROUND" value="999999" />
-      </value>
-    </option>
-    <option name="RUBY_HEREDOC_CONTENT">
-      <value>
-        <option name="FOREGROUND" value="999999" />
-      </value>
-    </option>
     <option name="RUBY_IDENTIFIER">
       <value>
         <option name="FOREGROUND" value="008080" />
@@ -1431,6 +1462,11 @@
     <option name="RUBY_CONSTANT">
       <value>
         <option name="FOREGROUND" value="707090" />
+      </value>
+    </option>
+    <option name="RUBY_CONSTANT_DECLARATION">
+      <value>
+        <option name="FOREGROUND" value="70E080" />
       </value>
     </option>
     <option name="RUBY_GVAR">
@@ -1564,11 +1600,9 @@
       </value>
     </option>
     <option name="GHERKIN_TABLE_CELL">
-      <value>
-        <option name="FOREGROUND" value="999999" />
-      </value>
+      <value />
     </option>
-    <option name="PIPE">
+    <option name="GHERKIN_TABLE_PIPE">
       <value>
         <option name="FOREGROUND" value="80A0FF" />
       </value>
@@ -1582,6 +1616,195 @@
       <value>
         <option name="FOREGROUND" value="999999" />
       </value>
+    </option>
+    <option name="COFFEESCRIPT.BLOCK_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="404080" />
+        <option name="BACKGROUND" value="200020" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.LINE_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="404080" />
+        <option name="BACKGROUND" value="200020" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.BAD_CHARACTER">
+      <value>
+        <option name="FOREGROUND" value="400080" />
+        <option name="BACKGROUND" value="FFFF00" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.SEMICOLON">
+      <value>
+        <option name="FOREGROUND" value="805080" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.COMMA">
+      <value>
+        <option name="FOREGROUND" value="805080" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.DOT">
+      <value>
+        <option name="FOREGROUND" value="805080" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.CLASS_NAME">
+      <value>
+        <option name="FOREGROUND" value="50A0A0" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.IDENTIFIER">
+      <value />
+    </option>
+    <option name="COFFEESCRIPT.FUNCTION_NAME">
+      <value>
+        <option name="FOREGROUND" value="50A0A0" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.OBJECT_KEY">
+      <value />
+    </option>
+    <option name="COFFEESCRIPT.NUMBER">
+      <value>
+        <option name="FOREGROUND" value="7090B0" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.BOOLEAN">
+      <value>
+        <option name="FOREGROUND" value="8080A0" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.STRING_LITERAL">
+      <value>
+        <option name="FOREGROUND" value="805080" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.STRING">
+      <value>
+        <option name="FOREGROUND" value="999999" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.HEREDOC_ID">
+      <value>
+        <option name="FOREGROUND" value="805080" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.HEREDOC_CONTENT">
+      <value>
+        <option name="FOREGROUND" value="999999" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.HEREGEX_ID">
+      <value>
+        <option name="FOREGROUND" value="999999" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.HEREGEX_CONTENT">
+      <value>
+        <option name="FOREGROUND" value="999999" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.JAVASCRIPT_ID">
+      <value>
+        <option name="FOREGROUND" value="805080" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.EXPRESSIONS_SUBSTITUTION_MARK">
+      <value>
+        <option name="FOREGROUND" value="805080" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.PARENTHESIS">
+      <value>
+        <option name="FOREGROUND" value="805080" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.BRACKET">
+      <value>
+        <option name="FOREGROUND" value="805080" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.BRACE">
+      <value>
+        <option name="FOREGROUND" value="805080" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.OPERATIONS">
+      <value>
+        <option name="FOREGROUND" value="A0A0FF" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.EXISTENTIAL">
+      <value>
+        <option name="FOREGROUND" value="A0A0FF" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="80A0FF" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.RANGE">
+      <value>
+        <option name="FOREGROUND" value="805080" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.SPLAT">
+      <value>
+        <option name="FOREGROUND" value="805080" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.THIS">
+      <value>
+        <option name="FOREGROUND" value="008080" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.COLON">
+      <value>
+        <option name="FOREGROUND" value="A0A0FF" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.PROTOTYPE">
+      <value>
+        <option name="FOREGROUND" value="50A0A0" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.FUNCTION">
+      <value>
+        <option name="FOREGROUND" value="B0FFF0" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.FUNCTION_BINDING">
+      <value>
+        <option name="FOREGROUND" value="B0FFF0" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.REGULAR_EXPRESSION_ID">
+      <value>
+        <option name="FOREGROUND" value="999999" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.REGULAR_EXPRESSION_CONTENT">
+      <value>
+        <option name="FOREGROUND" value="999999" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.REGULAR_EXPRESSION_FLAG">
+      <value>
+        <option name="FOREGROUND" value="999999" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.ESCAPE_SEQUENCE">
+      <value>
+        <option name="FOREGROUND" value="666666" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.JAVASCRIPT_CONTENT">
+      <value />
     </option>
     <option name="RHTML_SCRIPTLET_START_ID">
       <value>
@@ -1617,7 +1840,7 @@
     </option>
     <option name="RHTML_SCRIPTING_BACKGROUND_ID">
       <value>
-        <option name="BACKGROUND" value="373737" />
+        <option name="FOREGROUND" value="805080" />
       </value>
     </option>
     <option name="CUSTOM_NUMBER_ATTRIBUTES">
