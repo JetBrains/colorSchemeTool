@@ -1528,6 +1528,179 @@
         <option name="FOREGROUND" value="494949" />
       </value>
     </option>
+    <option name="COFFEESCRIPT.BLOCK_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="5F5A60" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.LINE_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="5F5A60" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.BAD_CHARACTER">
+      <value>
+        <option name="FOREGROUND" value="D2A8A1" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.SEMICOLON">
+      <value />
+    </option>
+    <option name="COFFEESCRIPT.COMMA">
+      <value />
+    </option>
+    <option name="COFFEESCRIPT.DOT">
+      <value />
+    </option>
+    <option name="COFFEESCRIPT.CLASS_NAME">
+      <value>
+        <option name="FOREGROUND" value="E0C589" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="DAEFA3" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.FUNCTION_NAME">
+      <value>
+        <option name="FOREGROUND" value="E0C589" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.OBJECT_KEY">
+      <value>
+        <option name="FOREGROUND" value="8A9A95" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.NUMBER">
+      <value>
+        <option name="FOREGROUND" value="CA7840" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.BOOLEAN">
+      <value>
+        <option name="FOREGROUND" value="CA7840" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.STRING_LITERAL">
+      <value>
+        <option name="FOREGROUND" value="8F9D6A" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.STRING">
+      <value>
+        <option name="FOREGROUND" value="494949" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.HEREDOC_ID">
+      <value>
+        <option name="FOREGROUND" value="8F9D6A" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.HEREDOC_CONTENT">
+      <value>
+        <option name="FOREGROUND" value="494949" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.HEREGEX_ID">
+      <value>
+        <option name="FOREGROUND" value="494949" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.HEREGEX_CONTENT">
+      <value>
+        <option name="FOREGROUND" value="494949" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.JAVASCRIPT_ID">
+      <value>
+        <option name="FOREGROUND" value="8F9D6A" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.EXPRESSIONS_SUBSTITUTION_MARK">
+      <value />
+    </option>
+    <option name="COFFEESCRIPT.PARENTHESIS">
+      <value />
+    </option>
+    <option name="COFFEESCRIPT.BRACKET">
+      <value />
+    </option>
+    <option name="COFFEESCRIPT.BRACE">
+      <value />
+    </option>
+    <option name="COFFEESCRIPT.OPERATIONS">
+      <value>
+        <option name="FOREGROUND" value="AFC4DB" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.EXISTENTIAL">
+      <value>
+        <option name="FOREGROUND" value="AFC4DB" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="AFC4DB" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.RANGE">
+      <value />
+    </option>
+    <option name="COFFEESCRIPT.SPLAT">
+      <value />
+    </option>
+    <option name="COFFEESCRIPT.THIS">
+      <value>
+        <option name="FOREGROUND" value="8A9A95" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.COLON">
+      <value>
+        <option name="FOREGROUND" value="AFC4DB" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.PROTOTYPE">
+      <value>
+        <option name="FOREGROUND" value="E0C589" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.FUNCTION">
+      <value>
+        <option name="FOREGROUND" value="F9EE98" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.FUNCTION_BINDING">
+      <value>
+        <option name="FOREGROUND" value="F9EE98" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.REGULAR_EXPRESSION_ID">
+      <value>
+        <option name="FOREGROUND" value="494949" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.REGULAR_EXPRESSION_CONTENT">
+      <value>
+        <option name="FOREGROUND" value="494949" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.REGULAR_EXPRESSION_FLAG">
+      <value>
+        <option name="FOREGROUND" value="494949" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.ESCAPE_SEQUENCE">
+      <value>
+        <option name="FOREGROUND" value="CA7840" />
+      </value>
+    </option>
+    <option name="COFFEESCRIPT.JAVASCRIPT_CONTENT">
+      <value />
+    </option>
     <option name="RHTML_SCRIPTLET_START_ID">
       <value>
         <option name="FOREGROUND" value="494949" />
