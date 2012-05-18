@@ -170,7 +170,7 @@
     </option>
     <option name="COFFEESCRIPT.IDENTIFIER">
       <value>
-        <option name="BACKGROUND" value="6F8BBA" />
+        <option name="BACKGROUND" value="e4e8ef" />
       </value>
     </option>
     <option name="COFFEESCRIPT.JAVASCRIPT_CONTENT">
@@ -630,7 +630,7 @@
     </option>
     <option name="HAML_RUBY_CODE">
       <value>
-        <option name="BACKGROUND" value="6F8BBA" />
+        <option name="BACKGROUND" value="e4e8ef" />
       </value>
     </option>
     <option name="HAML_RUBY_START">
@@ -1365,7 +1365,7 @@
     </option>
     <option name="RHTML_SCRIPTING_BACKGROUND_ID">
       <value>
-        <option name="BACKGROUND" value="6F8BBA" />
+        <option name="BACKGROUND" value="e4e8ef" />
       </value>
     </option>
     <option name="RHTML_SCRIPTLET_END_ID">

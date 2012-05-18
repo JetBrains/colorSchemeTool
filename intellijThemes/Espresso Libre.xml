@@ -158,7 +158,7 @@
     </option>
     <option name="COFFEESCRIPT.IDENTIFIER">
       <value>
-        <option name="BACKGROUND" value="F5AA77" />
+        <option name="BACKGROUND" value="503a2d" />
       </value>
     </option>
     <option name="COFFEESCRIPT.JAVASCRIPT_CONTENT">
@@ -597,7 +597,7 @@
     </option>
     <option name="HAML_RUBY_CODE">
       <value>
-        <option name="BACKGROUND" value="F5AA77" />
+        <option name="BACKGROUND" value="503a2d" />
       </value>
     </option>
     <option name="HAML_RUBY_START">
@@ -1272,7 +1272,7 @@
     </option>
     <option name="RHTML_SCRIPTING_BACKGROUND_ID">
       <value>
-        <option name="BACKGROUND" value="F5AA77" />
+        <option name="BACKGROUND" value="503a2d" />
       </value>
     </option>
     <option name="RHTML_SCRIPTLET_END_ID">
@@ -1341,7 +1341,7 @@
     </option>
     <option name="RUBY_HEREDOC_CONTENT">
       <value>
-        <option name="BACKGROUND" value="F5AA77" />
+        <option name="BACKGROUND" value="503a2d" />
       </value>
     </option>
     <option name="RUBY_HEREDOC_ID">
@@ -1771,7 +1771,7 @@
     </option>
     <option name="YAML_SCALAR_LIST">
       <value>
-        <option name="BACKGROUND" value="F5AA77" />
+        <option name="BACKGROUND" value="503a2d" />
       </value>
     </option>
     <option name="YAML_SCALAR_STRING">
@@ -1781,7 +1781,7 @@
     </option>
     <option name="YAML_SCALAR_VALUE">
       <value>
-        <option name="BACKGROUND" value="F5AA77" />
+        <option name="BACKGROUND" value="503a2d" />
       </value>
     </option>
     <option name="YAML_SIGN">
@@ -1791,7 +1791,7 @@
     </option>
     <option name="YAML_TEXT">
       <value>
-        <option name="BACKGROUND" value="F5AA77" />
+        <option name="BACKGROUND" value="503a2d" />
       </value>
     </option>
   </attributes>

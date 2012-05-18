@@ -32,7 +32,7 @@
     <option name="BAD_CHARACTER">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="BREAKPOINT_ATTRIBUTES">
@@ -72,7 +72,7 @@
     <option name="COFFEESCRIPT.BAD_CHARACTER">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="COFFEESCRIPT.BLOCK_COMMENT">
@@ -155,7 +155,7 @@
     <option name="COFFEESCRIPT.IDENTIFIER">
       <value>
         <option name="FOREGROUND" value="000000" />
-        <option name="BACKGROUND" value="FAFAFA" />
+        <option name="BACKGROUND" value="f9f9f9" />
       </value>
     </option>
     <option name="COFFEESCRIPT.JAVASCRIPT_CONTENT">
@@ -337,7 +337,7 @@
     <option name="CUSTOM_INVALID_STRING_ESCAPE_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="CUSTOM_KEYWORD1_ATTRIBUTES">
@@ -590,7 +590,7 @@
     </option>
     <option name="HAML_RUBY_CODE">
       <value>
-        <option name="BACKGROUND" value="FAFAFA" />
+        <option name="BACKGROUND" value="f9f9f9" />
       </value>
     </option>
     <option name="HAML_RUBY_START">
@@ -717,7 +717,7 @@
     <option name="JAVA_INVALID_STRING_ESCAPE">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="JAVA_KEYWORD">
@@ -765,7 +765,7 @@
     <option name="JS.BADCHARACTER">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="JS.BLOCK_COMEMNT">
@@ -827,7 +827,7 @@
     <option name="JS.INVALID_STRING_ESCAPE">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="JS.KEYWORD">
@@ -951,7 +951,7 @@
     <option name="PHP_BAD_CHARACTER">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="PHP_BRACKETS">
@@ -1090,7 +1090,7 @@
     <option name="PY.INVALID_STRING_ESCAPE">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="PY.KEYWORD">
@@ -1136,7 +1136,7 @@
     <option name="REGEXP.BAD_CHARACTER">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="REGEXP.BRACES">
@@ -1167,7 +1167,7 @@
     <option name="REGEXP.INVALID_STRING_ESCAPE">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="REGEXP.META">
@@ -1262,7 +1262,7 @@
     </option>
     <option name="RHTML_SCRIPTING_BACKGROUND_ID">
       <value>
-        <option name="BACKGROUND" value="FAFAFA" />
+        <option name="BACKGROUND" value="f9f9f9" />
       </value>
     </option>
     <option name="RHTML_SCRIPTLET_END_ID">
@@ -1278,7 +1278,7 @@
     <option name="RUBY_BAD_CHARACTER">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="RUBY_BRACKETS">
@@ -1347,7 +1347,7 @@
     <option name="RUBY_INVALID_ESCAPE_SEQUENCE">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="RUBY_IVAR">
@@ -1490,7 +1490,7 @@
     <option name="SMARTY_BAD_CHARACTER">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="SMARTY_BRACKETS">
@@ -1528,7 +1528,7 @@
     <option name="SQL_BAD_CHARACTER">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="SQL_BRACES">
@@ -1645,7 +1645,7 @@
     <option name="TWIG_BAD_CHARACTER">
       <value>
         <option name="FOREGROUND" value="FF0000" />
-        <option name="BACKGROUND" value="E71A11" />
+        <option name="BACKGROUND" value="ebaeab" />
       </value>
     </option>
     <option name="TWIG_BRACKETS">
