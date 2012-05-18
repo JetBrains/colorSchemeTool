@@ -617,14 +617,14 @@ def font_style_from_textmate(style):
     if 'italic' in style: result += 2
     return result
 
-def attr_from_textmate(settings, old_value):
+def attr_from_textmate(settings, old_value, background):
     result = AttributeValue()
 
     if ('foreground' in settings) and ((old_value == None) or (old_value.default_fore != IGNORE_COLOR_VALUE)):
         result.foreground = color_from_textmate(settings['foreground'])
 
     if ('background' in settings) and ((old_value == None) or (old_value.default_back != IGNORE_COLOR_VALUE)):
-        result.background = color_from_textmate(settings['background'])
+        result.background = color_from_textmate(settings['background'], background)
 
     if 'fontStyle' in settings:
         tm_font_style = settings['fontStyle']
@@ -661,7 +661,7 @@ def load_textmate_scheme(tmtheme):
         return
     default_settings = default_settings['settings']
 
-    text.value = attr_from_textmate(default_settings, None)
+    text.value = attr_from_textmate(default_settings, None, None)
 
     background = default_settings['background']
 
@@ -693,7 +693,9 @@ def load_textmate_scheme(tmtheme):
                 if the_scope:
                     print "converting attribute " + attr.id + " from TextMate scope " + the_scope
                     used_scopes.add(the_scope)
-                attr.value = attr_from_textmate(settings['settings'], attr.value)
+                attr.value = attr_from_textmate(settings['settings'], attr.value, background)
+            else:
+               print "[!] scope not found: " + attr.scope
     return all_settings, used_scopes
 
 def write_idea_scheme(filename):
