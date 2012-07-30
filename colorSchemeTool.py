@@ -207,6 +207,8 @@ for id in ["FOLDED_TEXT_ATTRIBUTES",
 
 # HighlighterColors
 bad_character = Attribute("BAD_CHARACTER", text, scope='invalid')
+matched_brace = Attribute("MATCHED_BRACE_ATTRIBUTES", text, background=(153, 204, 255))
+unmatched_brace = Attribute("UNMATCHED_BRACE_ATTRIBUTES", text, background=(255, 220, 220))
 
 # CodeInsightColors
 local_variable = Attribute("LOCAL_VARIABLE_ATTRIBUTES", text)
@@ -410,6 +412,57 @@ js_global_function = Attribute("JS.GLOBAL_FUNCTION", static_method)
 js_static_member_func = Attribute("JS.STATIC_MEMBER_FUNCTION", static_method)
 js_instance_member_func = Attribute("JS.INSTANCE_MEMBER_FUNCTION", text, foreground=(0x7a, 0x7a, 43))
 js_attr = Attribute("JS.ATTRIBUTE", text, background=(0xf7, 0xe9, 0xe9))
+
+# PHP
+php_keyword = Attribute("PHP_KEYWORD", keyword)
+php_line_comment = Attribute("PHP_COMMENT", line_comment)
+php_doc_comment = Attribute("PHP_DOC_COMMENT_ID", doc_comment)
+php_heredoc_id = Attribute("PHP_HEREDOC_ID", doc_comment_tag)
+php_number = Attribute("PHP_NUMBER", number)
+php_string = Attribute("PHP_STRING", string)
+php_exec_command = Attribute("PHP_EXEC_COMMAND_ID", string, background=(227, 252, 255))
+php_escape_sequence = Attribute("PHP_ESCAPE_SEQUENCE", valid_string_escape)
+php_opSign = Attribute("PHP_OPERATION_SIGN", opSign)
+php_brackets = Attribute("PHP_BRACKETS", brackets)
+php_predefined_symbol = Attribute("PHP_PREDEFINED SYMBOL", text)
+php_bad_character = Attribute("PHP_BAD_CHARACTER", bad_character)
+php_heredoc_content = Attribute("PHP_HEREDOC_CONTENT", string)
+php_identifier = Attribute("PHP_IDENTIFIER", text)
+php_constant = Attribute("PHP_CONSTANT", php_identifier, scope='constant')
+php_var = Attribute("PHP_VAR", keyword, foreground=(102, 0, 0), font_style=0)
+php_comma = Attribute("PHP_COMMA", comma)
+php_semicolon = Attribute("PHP_SEMICOLON", semicolon)
+php_doc_tag = Attribute("PHP_DOC_TAG", doc_comment_tag)
+php_doc_markup = Attribute("PHP_MARKUP_ID", doc_comment_markup)
+php_scripting_background = Attribute("PHP_SCRIPTING_BACKGROUND", text, background=(247, 250, 255))
+php_tag = Attribute("PHP_TAG", keyword, foreground=(0, 0, 102))
+
+# Smarty
+smarty_keyword = Attribute("SMARTY_KEYWORD", keyword)
+smarty_line_comment = Attribute("SMARTY_COMMENT", line_comment)
+smarty_number = Attribute("SMARTY_NUMBER", number)
+smarty_string = Attribute("SMARTY_STRING", string)
+smarty_opSign = Attribute("SMARTY_OPERATION_SIGN", opSign)
+smarty_brackets = Attribute("SMARTY_BRACKETS", brackets)
+smarty_bad_character = Attribute("SMARTY_BAD_CHARACTER", bad_character)
+smarty_identifier = Attribute("SMARTY_IDENTIFIER", text)
+smarty_scripting_background = Attribute("SMARTY_BACKGROUND", text, background=(247, 250, 255))
+
+# Twig
+twig_bad_character = Attribute("TWIG_BAD_CHARACTER", bad_character)
+twig_line_comment = Attribute("TWIG_COMMENT", line_comment)
+twig_keyword = Attribute("TWIG_KEYWORD", keyword)
+twig_number = Attribute("TWIG_NUMBER", number)
+twig_string = Attribute("TWIG_STRING", string)
+twig_opSign = Attribute("TWIG_OPERATION_SIGN", opSign)
+twig_brackets = Attribute("TWIG_BRACKETS", brackets)
+twig_identifier = Attribute("TWIG_IDENTIFIER", text)
+twig_scripting_background = Attribute("TWIG_BACKGROUND", text, background=(247, 250, 255))
+
+# Apache Config
+ac_line_comment = Attribute("APACHE_CONFIG.COMMENT", line_comment)
+ac_arg_lexem = Attribute("APACHE_CONFIG.ARG_LEXEM", string)
+ac_identifier = Attribute("APACHE_CONFIG.IDENTIFIER", keyword)
 
 # YAML
 yaml_scalar_key = Attribute("YAML_SCALAR_KEY", keyword)
@@ -629,7 +682,7 @@ def write_idea_scheme(filename):
         if attr.value.error_stripe:
             ET.SubElement(value, 'option', name='ERROR_STRIPE_COLOR', value=attr.value.error_stripe)
     indent(scheme)
-    ET.ElementTree(scheme).write(filename)
+    ET.ElementTree(scheme).write(open(filename, "w+"))
 
 if len(sys.argv) != 3:
     print 'Usage: colorSchemeTool <TextMate scheme> <IDEA/PyCharm/RubyMine scheme>'
