@@ -390,7 +390,6 @@ less_variable = Attribute("LESS_VARIABLE", text, scope='variable.other.less')
 less_code_injection_delim = Attribute("LESS_JS_CODE_DELIM", text, scope='source.css.less')
 less_code_injection = Attribute("LESS_INJECTED_CODE", text, scope='source.js.embedded.less', foreground=IGNORE_COLOR)
 
-
 # SASS
 sass_rule = Attribute("SASS_RULE", keyword, scope='entity.other.attribute-name.id.sass')
 sass_variable = Attribute("SASS_VARIABLE", text, scope='variable.parameter.sass')
@@ -767,6 +766,8 @@ def load_textmate_scheme(tmtheme):
     all_colors['CARET_COLOR'] = color_from_textmate(default_settings['caret'])
     all_colors['INDENT_GUIDE'] = color_from_textmate(default_settings['invisibles'], background)
     all_colors['WHITESPACES'] = color_from_textmate(default_settings['invisibles'], background)
+    all_colors["GUTTER_BACKGROUND"] = color_from_textmate(background)
+    all_colors["LINE_NUMBERS_COLOR"] = color_from_textmate(default_settings['foreground'])
 
     selection_background = color_from_textmate(default_settings['selection'], background)
     caret_row_color = color_from_textmate(default_settings['lineHighlight'], background)
