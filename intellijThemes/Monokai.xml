@@ -135,6 +135,9 @@
         <option name="FOREGROUND" value="A6E22E" />
       </value>
     </option>
+    <option name="COFFEESCRIPT.GLOBAL_VARIABLE">
+      <value />
+    </option>
     <option name="COFFEESCRIPT.HEREDOC_CONTENT">
       <value>
         <option name="FOREGROUND" value="E6DB74" />
@@ -175,6 +178,9 @@
       <value>
         <option name="FOREGROUND" value="75715E" />
       </value>
+    </option>
+    <option name="COFFEESCRIPT.LOCAL_VARIABLE">
+      <value />
     </option>
     <option name="COFFEESCRIPT.NUMBER">
       <value>
@@ -235,10 +241,14 @@
       <value />
     </option>
     <option name="CONSOLE_BLUE_OUTPUT">
-      <value />
+      <value>
+        <option name="FOREGROUND" value="c7c7ff" />
+      </value>
     </option>
     <option name="CONSOLE_CYAN_OUTPUT">
-      <value />
+      <value>
+        <option name="FOREGROUND" value="06b8b8" />
+      </value>
     </option>
     <option name="CONSOLE_ERROR_OUTPUT">
       <value>
@@ -246,13 +256,19 @@
       </value>
     </option>
     <option name="CONSOLE_GRAY_OUTPUT">
-      <value />
+      <value>
+        <option name="FOREGROUND" value="a7a7a7" />
+      </value>
     </option>
     <option name="CONSOLE_GREEN_OUTPUT">
-      <value />
+      <value>
+        <option name="FOREGROUND" value="68e868" />
+      </value>
     </option>
     <option name="CONSOLE_MAGENTA_OUTPUT">
-      <value />
+      <value>
+        <option name="FOREGROUND" value="ff2eff" />
+      </value>
     </option>
     <option name="CONSOLE_NORMAL_OUTPUT">
       <value>
@@ -260,7 +276,9 @@
       </value>
     </option>
     <option name="CONSOLE_RED_OUTPUT">
-      <value />
+      <value>
+        <option name="FOREGROUND" value="ff6767" />
+      </value>
     </option>
     <option name="CONSOLE_SYSTEM_OUTPUT">
       <value>
@@ -274,7 +292,9 @@
       </value>
     </option>
     <option name="CONSOLE_YELLOW_OUTPUT">
-      <value />
+      <value>
+        <option name="FOREGROUND" value="754200" />
+      </value>
     </option>
     <option name="CSS.COMMENT">
       <value>
@@ -312,7 +332,7 @@
     </option>
     <option name="CSS.PROPERTY_VALUE">
       <value>
-        <option name="FOREGROUND" value="ffb3b3" />
+        <option name="FOREGROUND" value="68e868" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -341,7 +361,7 @@
     </option>
     <option name="CUSTOM_KEYWORD1_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="ffb3b3" />
+        <option name="FOREGROUND" value="e3e3ff" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -353,7 +373,7 @@
     </option>
     <option name="CUSTOM_KEYWORD3_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="b0b04a" />
+        <option name="FOREGROUND" value="71d7d7" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -390,6 +410,40 @@
       <value>
         <option name="FOREGROUND" value="AE81FF" />
         <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="Clojure Atom">
+      <value>
+        <option name="FOREGROUND" value="F92672" />
+      </value>
+    </option>
+    <option name="Clojure Character">
+      <value>
+        <option name="FOREGROUND" value="E6DB74" />
+      </value>
+    </option>
+    <option name="Clojure Keyword">
+      <value />
+    </option>
+    <option name="Clojure Line comment">
+      <value>
+        <option name="FOREGROUND" value="75715E" />
+      </value>
+    </option>
+    <option name="Clojure Literal">
+      <value>
+        <option name="FOREGROUND" value="fda5ff" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="Clojure Numbers">
+      <value>
+        <option name="FOREGROUND" value="AE81FF" />
+      </value>
+    </option>
+    <option name="Clojure Strings">
+      <value>
+        <option name="FOREGROUND" value="E6DB74" />
       </value>
     </option>
     <option name="DEPRECATED_ATTRIBUTES">
@@ -454,7 +508,7 @@
     </option>
     <option name="DJANGO_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="ffb3b3" />
+        <option name="FOREGROUND" value="e3e3ff" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -476,7 +530,7 @@
     <option name="EXECUTIONPOINT_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="000101" />
-        <option name="BACKGROUND" value="ff6767" />
+        <option name="BACKGROUND" value="c7c7ff" />
       </value>
     </option>
     <option name="FOLDED_TEXT_ATTRIBUTES">
@@ -495,6 +549,11 @@
         <option name="FONT_TYPE" value="2" />
         <option name="EFFECT_TYPE" value="1" />
         <option name="EFFECT_COLOR" value="c7c7ff" />
+      </value>
+    </option>
+    <option name="First symbol in list">
+      <value>
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="GENERIC_SERVER_ERROR_OR_WARNING">
@@ -591,16 +650,37 @@
     <option name="HAML_LINE_CONTINUATION">
       <value />
     </option>
+    <option name="HAML_PARENTHS">
+      <value />
+    </option>
     <option name="HAML_RUBY_CODE">
       <value />
     </option>
     <option name="HAML_RUBY_START">
       <value />
     </option>
+    <option name="HAML_STRING">
+      <value>
+        <option name="FOREGROUND" value="E6DB74" />
+      </value>
+    </option>
+    <option name="HAML_STRING_INTERPOLATED">
+      <value>
+        <option name="FOREGROUND" value="E6DB74" />
+      </value>
+    </option>
     <option name="HAML_TAG">
       <value />
     </option>
+    <option name="HAML_TAG_NAME">
+      <value>
+        <option name="FOREGROUND" value="F92672" />
+      </value>
+    </option>
     <option name="HAML_TEXT">
+      <value />
+    </option>
+    <option name="HAML_WS_REMOVAL">
       <value />
     </option>
     <option name="HAML_XHTML">
@@ -629,13 +709,11 @@
       </value>
     </option>
     <option name="HTML_TAG">
-      <value>
-        <option name="BACKGROUND" value="373737" />
-      </value>
+      <value />
     </option>
     <option name="HTML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="ffb3b3" />
+        <option name="FOREGROUND" value="e3e3ff" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -886,6 +964,12 @@
         <option name="FOREGROUND" value="AE81FF" />
       </value>
     </option>
+    <option name="LESS_INJECTED_CODE">
+      <value />
+    </option>
+    <option name="LESS_JS_CODE_DELIM">
+      <value />
+    </option>
     <option name="LESS_VARIABLE">
       <value />
     </option>
@@ -958,9 +1042,7 @@
       </value>
     </option>
     <option name="PHP_CONSTANT">
-      <value>
-        <option name="FOREGROUND" value="AE81FF" />
-      </value>
+      <value />
     </option>
     <option name="PHP_DOC_COMMENT_ID">
       <value>
@@ -1238,34 +1320,22 @@
       </value>
     </option>
     <option name="RHTML_EXPRESSION_END_ID">
-      <value>
-        <option name="BACKGROUND" value="373737" />
-      </value>
+      <value />
     </option>
     <option name="RHTML_EXPRESSION_START_ID">
-      <value>
-        <option name="BACKGROUND" value="373737" />
-      </value>
+      <value />
     </option>
     <option name="RHTML_OMIT_NEW_LINE_ID">
-      <value>
-        <option name="BACKGROUND" value="373737" />
-      </value>
+      <value />
     </option>
     <option name="RHTML_SCRIPTING_BACKGROUND_ID">
-      <value>
-        <option name="BACKGROUND" value="373737" />
-      </value>
+      <value />
     </option>
     <option name="RHTML_SCRIPTLET_END_ID">
-      <value>
-        <option name="BACKGROUND" value="373737" />
-      </value>
+      <value />
     </option>
     <option name="RHTML_SCRIPTLET_START_ID">
-      <value>
-        <option name="BACKGROUND" value="373737" />
-      </value>
+      <value />
     </option>
     <option name="RUBY_BAD_CHARACTER">
       <value>
@@ -1274,6 +1344,9 @@
       </value>
     </option>
     <option name="RUBY_BRACKETS">
+      <value />
+    </option>
+    <option name="RUBY_COLON">
       <value />
     </option>
     <option name="RUBY_COMMA">
@@ -1285,14 +1358,15 @@
       </value>
     </option>
     <option name="RUBY_CONSTANT">
-      <value>
-        <option name="FOREGROUND" value="AE81FF" />
-      </value>
+      <value />
     </option>
     <option name="RUBY_CONSTANT_DECLARATION">
       <value />
     </option>
     <option name="RUBY_CVAR">
+      <value />
+    </option>
+    <option name="RUBY_DOT">
       <value />
     </option>
     <option name="RUBY_ESCAPE_SEQUENCE">
@@ -1325,6 +1399,11 @@
     </option>
     <option name="RUBY_IDENTIFIER">
       <value />
+    </option>
+    <option name="RUBY_INTERPOLATED_STRING">
+      <value>
+        <option name="FOREGROUND" value="E6DB74" />
+      </value>
     </option>
     <option name="RUBY_INVALID_ESCAPE_SEQUENCE">
       <value>
@@ -1405,31 +1484,39 @@
         <option name="FOREGROUND" value="E6DB74" />
       </value>
     </option>
-    <option name="SASS_ATTRIBUTE">
-      <value>
-        <option name="FOREGROUND" value="66D9EF" />
-        <option name="FONT_TYPE" value="2" />
-      </value>
-    </option>
     <option name="SASS_COMMENT">
       <value>
         <option name="FOREGROUND" value="75715E" />
       </value>
     </option>
-    <option name="SASS_CONSTANT">
-      <value>
-        <option name="FOREGROUND" value="FD971F" />
-        <option name="FONT_TYPE" value="2" />
-      </value>
-    </option>
-    <option name="SASS_DIRECTIVE">
+    <option name="SASS_DEFAULT">
       <value>
         <option name="FOREGROUND" value="F92672" />
       </value>
     </option>
-    <option name="SASS_IDENTIFIER">
+    <option name="SASS_EXTEND">
+      <value>
+        <option name="FOREGROUND" value="F92672" />
+      </value>
+    </option>
+    <option name="SASS_FUNCTION">
       <value>
         <option name="FOREGROUND" value="66D9EF" />
+      </value>
+    </option>
+    <option name="SASS_IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="A6E22E" />
+      </value>
+    </option>
+    <option name="SASS_IMPORTANT">
+      <value>
+        <option name="FOREGROUND" value="F92672" />
+      </value>
+    </option>
+    <option name="SASS_KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="F92672" />
       </value>
     </option>
     <option name="SASS_MIXIN">
@@ -1442,14 +1529,30 @@
         <option name="FOREGROUND" value="AE81FF" />
       </value>
     </option>
-    <option name="SASS_RULE">
+    <option name="SASS_PROPERTY_NAME">
       <value>
-        <option name="FOREGROUND" value="A6E22E" />
+        <option name="FOREGROUND" value="66D9EF" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="SASS_PROPERTY_VALUE">
+      <value>
+        <option name="FOREGROUND" value="66D9EF" />
       </value>
     </option>
     <option name="SASS_STRING">
       <value>
         <option name="FOREGROUND" value="E6DB74" />
+      </value>
+    </option>
+    <option name="SASS_TAG_NAME">
+      <value>
+        <option name="FOREGROUND" value="F92672" />
+      </value>
+    </option>
+    <option name="SASS_URL">
+      <value>
+        <option name="FOREGROUND" value="66D9EF" />
       </value>
     </option>
     <option name="SASS_VARIABLE">
@@ -1462,6 +1565,75 @@
       <value>
         <option name="BACKGROUND" value="4f4f82" />
       </value>
+    </option>
+    <option name="SLIM_BAD_CHARACTER">
+      <value>
+        <option name="FOREGROUND" value="F8F8F0" />
+        <option name="BACKGROUND" value="F92672" />
+      </value>
+    </option>
+    <option name="SLIM_CALL">
+      <value />
+    </option>
+    <option name="SLIM_CLASS">
+      <value>
+        <option name="FOREGROUND" value="F92672" />
+      </value>
+    </option>
+    <option name="SLIM_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="75715E" />
+      </value>
+    </option>
+    <option name="SLIM_DOCTYPE_KWD">
+      <value>
+        <option name="FOREGROUND" value="F92672" />
+      </value>
+    </option>
+    <option name="SLIM_FILTER">
+      <value>
+        <option name="FOREGROUND" value="F92672" />
+      </value>
+    </option>
+    <option name="SLIM_FILTER_CONTENT">
+      <value />
+    </option>
+    <option name="SLIM_ID">
+      <value>
+        <option name="FOREGROUND" value="F92672" />
+      </value>
+    </option>
+    <option name="SLIM_INTERPOLATION">
+      <value>
+        <option name="FOREGROUND" value="E6DB74" />
+      </value>
+    </option>
+    <option name="SLIM_PARENTHS">
+      <value />
+    </option>
+    <option name="SLIM_RUBY_CODE">
+      <value />
+    </option>
+    <option name="SLIM_STATIC_CONTENT">
+      <value />
+    </option>
+    <option name="SLIM_STRING_INTERPOLATED">
+      <value>
+        <option name="FOREGROUND" value="E6DB74" />
+      </value>
+    </option>
+    <option name="SLIM_TAG">
+      <value>
+        <option name="FOREGROUND" value="F92672" />
+      </value>
+    </option>
+    <option name="SLIM_TAG_ATTR_KEY">
+      <value>
+        <option name="FOREGROUND" value="A6E22E" />
+      </value>
+    </option>
+    <option name="SLIM_TAG_START">
+      <value />
     </option>
     <option name="SMARTY_BACKGROUND">
       <value>
@@ -1597,6 +1769,11 @@
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
+    <option name="TAG_ATTR_KEY">
+      <value>
+        <option name="FOREGROUND" value="A6E22E" />
+      </value>
+    </option>
     <option name="TEXT">
       <value>
         <option name="FOREGROUND" value="F8F8F2" />
@@ -1611,7 +1788,7 @@
     </option>
     <option name="TODO_DEFAULT_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="ff6767" />
+        <option name="FOREGROUND" value="c7c7ff" />
         <option name="FONT_TYPE" value="3" />
         <option name="ERROR_STRIPE_COLOR" value="ff" />
       </value>
@@ -1709,9 +1886,7 @@
       </value>
     </option>
     <option name="XML_TAG">
-      <value>
-        <option name="BACKGROUND" value="373737" />
-      </value>
+      <value />
     </option>
     <option name="XML_TAG_DATA">
       <value>
@@ -1720,7 +1895,7 @@
     </option>
     <option name="XML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="ffb3b3" />
+        <option name="FOREGROUND" value="e3e3ff" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
