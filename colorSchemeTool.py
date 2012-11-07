@@ -493,6 +493,26 @@ yaml_scalar_list = Attribute("YAML_SCALAR_LIST", text, scope="string.unquoted.bl
 yaml_text = Attribute("YAML_TEXT", text, scope="string.unquoted.yaml")
 yaml_sign = Attribute("YAML_SIGN", opSign)
 
+# Puppet
+puppet_comment = Attribute("PUPPET_BLOCK_COMMENT", line_comment, scope="comment.block.puppet")
+puppet_regex = Attribute("PUPPET_REGEX", string, scope='string.regexp')
+puppet_variable = Attribute("PUPPET_VARIABLE", local_variable, scope="punctuation.definition.variable.puppet")
+puppet_variable_interpolation = Attribute("PUPPET_VARIABLE_INTERPOLATION", string, scope='string source')
+puppet_escape_sequence = Attribute("PUPPET_ESCAPE_SEQUENCE", valid_string_escape)
+puppet_resource_reference = Attribute("PUPPET_RESOURCE_REFERENCE", text)
+puppet_keyword = Attribute("PUPPET_KEYWORD", keyword, scope="keyword.control.puppet")
+puppet_digit = Attribute("PUPPET_NUMBER", number)
+puppet_dq_string = Attribute("PUPPET_STRING", string, scope="string.quoted.double.puppet")
+puppet_sq_string = Attribute("PUPPET_SQ_STRING", string, scope="string.quoted.single.puppet")
+puppet_operation_sign = Attribute("PUPPET_OPERATION_SIGN", opSign, scope="keyword.operator.assignment.puppet")
+puppet_parenths = Attribute("PUPPET_PARENTH", parenths, scope="punctuation.section.scope.puppet")
+puppet_brackets = Attribute("PUPPET_BRACKETS", brackets, scope="punctuation.definition.array.begin.puppet")
+puppet_braces = Attribute("PUPPET_BRACES", braces, scope="punctuation.section.scope.puppet")
+puppet_comma = Attribute("PUPPET_COMMA", comma)
+puppet_dot = Attribute("PUPPET_DOT", dot)
+puppet_semicolon = Attribute("PUPPET_SEMICOLON", semicolon)
+puppet_bat_character = Attribute("PUPPET_BAD_CHARACTER", bad_character)
+puppet_class = Attribute("PUPPET_CLASS", class_name, scope="entity.name.type.class.puppet")
 
 # RubyHighlighter
 rb_keyword = Attribute("RUBY_KEYWORD", keyword)
@@ -579,6 +599,7 @@ cucumber_table_pipe = Attribute("GHERKIN_TABLE_PIPE", semicolon, scope='keyword.
 cucumber_outline_param_substitution = Attribute("GHERKIN_OUTLINE_PARAMETER_SUBSTITUTION", cucumber_text, scope='variable.other')
 cucumber_scenario_regexp_param = Attribute("GHERKIN_REGEXP_PARAMETER", cucumber_text, scope='string.quoted.double')
 
+#CoffeeScript
 coffee_block_comment = Attribute("COFFEESCRIPT.BLOCK_COMMENT", block_comment, scope='comment.block.coffee')
 coffee_line_comment = Attribute("COFFEESCRIPT.LINE_COMMENT", block_comment, scope='comment.line.coffee')
 coffee_bad_char = Attribute("COFFEESCRIPT.BAD_CHARACTER", bad_character)
