@@ -834,6 +834,7 @@ def load_textmate_scheme(tmtheme):
 
     all_colors['CARET_COLOR'] = color_from_textmate(default_settings['caret'])
     all_colors['INDENT_GUIDE'] = color_from_textmate(default_settings['invisibles'], background)
+    all_colors['SELECTED_INDENT_GUIDE'] = all_colors['INDENT_GUIDE']
     all_colors['WHITESPACES'] = color_from_textmate(default_settings['invisibles'], background)
     all_colors["GUTTER_BACKGROUND"] = color_from_textmate(background)
     all_colors["LINE_NUMBERS_COLOR"] = color_from_textmate(default_settings['foreground'])
