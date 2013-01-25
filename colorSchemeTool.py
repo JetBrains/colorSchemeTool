@@ -723,6 +723,11 @@ def color_from_textmate(color, alpha_blend_with=None):
         g = g * alpha + gb * (1-alpha)
         b = b * alpha + bb * (1-alpha)
         return rgb_to_hex(r, g, b)
+    if len(rgba) == 3:
+        r = rgba[0]
+        g = rgba[1]
+        b = rgba[2]
+        return r + r + g + g + b + b
     return rgba[:6]
 
 def font_style_from_textmate(style):
