@@ -732,6 +732,7 @@ def color_from_textmate(color, alpha_blend_with=None):
 
 def font_style_from_textmate(style):
     result = 0
+    if 'bold' in style: result += 1
     if 'italic' in style: result += 2
     return result
 
