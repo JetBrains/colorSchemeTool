@@ -881,7 +881,7 @@ def write_idea_scheme(filename):
     scheme = ET.Element("scheme", name=underscore_to_camelcase(name), version="1", parent_scheme="Default")
     ET.SubElement(scheme, 'option', name='LINE_SPACING', value='1.0')
     ET.SubElement(scheme, 'option', name='EDITOR_FONT_SIZE', value='12')
-    ET.SubElement(scheme, 'option', name='EDITOR_FONT_NAME', value='Monaco')
+    ET.SubElement(scheme, 'option', name='EDITOR_FONT_NAME', value='Menlo')
     colors = ET.SubElement(scheme, 'colors')
     for name, value in all_colors.iteritems():
         ET.SubElement(colors, 'option', name=name, value=value)
