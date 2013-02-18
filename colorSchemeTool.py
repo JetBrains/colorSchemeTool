@@ -815,7 +815,7 @@ def write_idea_scheme(filename):
         fore = attr.value.foreground
         back = attr.value.background
         saveFg = fore and (fore != IGNORE_COLOR_VALUE)
-        saveBg = back and (back != IGNORE_COLOR_VALUE) and attr.id != "TEXT"
+        saveBg = back and (back != IGNORE_COLOR_VALUE)
         if saveFg or saveBg or attr.value.font_style or attr.value.effect_type or attr.value.error_stripe:
             option = ET.SubElement(attributes, 'option', name=attr.id)
             value = ET.SubElement(option, 'value')
