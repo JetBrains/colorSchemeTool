@@ -812,24 +812,27 @@ def write_idea_scheme(filename):
             print 'inheriting ' + attr.id + ' from ' + attr.parent.id
         elif isinstance(attr.value, DerivedAttributeValue):
             print 'transforming IDEA default color for ' + attr.id
-        option = ET.SubElement(attributes, 'option', name=attr.id)
-        value = ET.SubElement(option, 'value')
         fore = attr.value.foreground
-        if fore and (fore != IGNORE_COLOR_VALUE): ET.SubElement(value, 'option', name='FOREGROUND', value=fore)
         back = attr.value.background
-        if back and (back != IGNORE_COLOR_VALUE): ET.SubElement(value, 'option', name='BACKGROUND', value=back)
-        if attr.value.font_style:
-            ET.SubElement(value, 'option', name='FONT_TYPE', value=str(attr.value.font_style))
-        if attr.value.effect_type:
-            ET.SubElement(value, 'option', name='EFFECT_TYPE', value=str(attr.value.effect_type))
-            if attr.value.effect_color:
-                ET.SubElement(value, 'option', name='EFFECT_COLOR', value=attr.value.effect_color)                
-            elif fore:
-                ET.SubElement(value, 'option', name='EFFECT_COLOR', value=fore)
-            else:
-                ET.SubElement(value, 'option', name='EFFECT_COLOR', value=text.value.foreground)
-        if attr.value.error_stripe:
-            ET.SubElement(value, 'option', name='ERROR_STRIPE_COLOR', value=attr.value.error_stripe)
+        saveFg = fore and (fore != IGNORE_COLOR_VALUE)
+        saveBg = back and (back != IGNORE_COLOR_VALUE)
+        if saveFg or saveBg or attr.value.font_style or attr.value.effect_type or attr.value.error_stripe:
+            option = ET.SubElement(attributes, 'option', name=attr.id)
+            value = ET.SubElement(option, 'value')
+            if saveFg: ET.SubElement(value, 'option', name='FOREGROUND', value=fore)
+            if saveBg: ET.SubElement(value, 'option', name='BACKGROUND', value=back)
+            if attr.value.font_style:
+                ET.SubElement(value, 'option', name='FONT_TYPE', value=str(attr.value.font_style))
+            if attr.value.effect_type:
+                ET.SubElement(value, 'option', name='EFFECT_TYPE', value=str(attr.value.effect_type))
+                if attr.value.effect_color:
+                    ET.SubElement(value, 'option', name='EFFECT_COLOR', value=attr.value.effect_color)
+                elif fore:
+                    ET.SubElement(value, 'option', name='EFFECT_COLOR', value=fore)
+                else:
+                    ET.SubElement(value, 'option', name='EFFECT_COLOR', value=text.value.foreground)
+            if attr.value.error_stripe:
+                ET.SubElement(value, 'option', name='ERROR_STRIPE_COLOR', value=attr.value.error_stripe)
     indent(scheme)
     ET.ElementTree(scheme).write(open(filename, "w+"))
 
