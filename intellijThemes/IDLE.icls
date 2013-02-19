@@ -331,6 +331,16 @@
         <option name="FOREGROUND" value="919191" />
       </value>
     </option>
+    <option name="DEFAULT_DOC_COMMENT_TAG">
+      <value>
+        <option name="FOREGROUND" value="919191" />
+      </value>
+    </option>
+    <option name="DEFAULT_DOC_MARKUP">
+      <value>
+        <option name="FOREGROUND" value="919191" />
+      </value>
+    </option>
     <option name="DEFAULT_FUNCTION_CALL">
       <value>
         <option name="FOREGROUND" value="21439C" />

@@ -385,6 +385,16 @@
         <option name="FOREGROUND" value="AEAEAE" />
       </value>
     </option>
+    <option name="DEFAULT_DOC_COMMENT_TAG">
+      <value>
+        <option name="FOREGROUND" value="AEAEAE" />
+      </value>
+    </option>
+    <option name="DEFAULT_DOC_MARKUP">
+      <value>
+        <option name="FOREGROUND" value="AEAEAE" />
+      </value>
+    </option>
     <option name="DEFAULT_ENTITY">
       <value>
         <option name="FOREGROUND" value="D8FA3C" />
@@ -405,6 +415,11 @@
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
+    <option name="DEFAULT_IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="FF6400" />
+      </value>
+    </option>
     <option name="DEFAULT_INSTANCE_METHOD">
       <value>
         <option name="FOREGROUND" value="FF6400" />
@@ -418,6 +433,11 @@
     <option name="DEFAULT_KEYWORD">
       <value>
         <option name="FOREGROUND" value="FBDE2D" />
+      </value>
+    </option>
+    <option name="DEFAULT_LABEL">
+      <value>
+        <option name="FOREGROUND" value="FF6400" />
       </value>
     </option>
     <option name="DEFAULT_LINE_COMMENT">

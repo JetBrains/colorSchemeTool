@@ -433,6 +433,16 @@
         <option name="FOREGROUND" value="00B418" />
       </value>
     </option>
+    <option name="DEFAULT_DOC_COMMENT_TAG">
+      <value>
+        <option name="FOREGROUND" value="00B418" />
+      </value>
+    </option>
+    <option name="DEFAULT_DOC_MARKUP">
+      <value>
+        <option name="FOREGROUND" value="00B418" />
+      </value>
+    </option>
     <option name="DEFAULT_ENTITY">
       <value>
         <option name="FOREGROUND" value="C5060B" />

@@ -408,6 +408,18 @@
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
+    <option name="DEFAULT_DOC_COMMENT_TAG">
+      <value>
+        <option name="FOREGROUND" value="5A525F" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="DEFAULT_DOC_MARKUP">
+      <value>
+        <option name="FOREGROUND" value="5A525F" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
     <option name="DEFAULT_ENTITY">
       <value>
         <option name="FOREGROUND" value="811F24" />
@@ -430,6 +442,11 @@
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
+    <option name="DEFAULT_IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="BF4F24" />
+      </value>
+    </option>
     <option name="DEFAULT_INSTANCE_FIELD">
       <value>
         <option name="FOREGROUND" value="234A97" />
@@ -448,6 +465,11 @@
     <option name="DEFAULT_KEYWORD">
       <value>
         <option name="FOREGROUND" value="794938" />
+      </value>
+    </option>
+    <option name="DEFAULT_LABEL">
+      <value>
+        <option name="FOREGROUND" value="BF4F24" />
       </value>
     </option>
     <option name="DEFAULT_LINE_COMMENT">

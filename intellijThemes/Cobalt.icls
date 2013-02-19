@@ -495,6 +495,18 @@
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
+    <option name="DEFAULT_DOC_COMMENT_TAG">
+      <value>
+        <option name="FOREGROUND" value="0088FF" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="DEFAULT_DOC_MARKUP">
+      <value>
+        <option name="FOREGROUND" value="0088FF" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
     <option name="DEFAULT_DOT">
       <value>
         <option name="FOREGROUND" value="E1EFFF" />
@@ -521,6 +533,11 @@
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
+    <option name="DEFAULT_IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="FFDD00" />
+      </value>
+    </option>
     <option name="DEFAULT_INSTANCE_FIELD">
       <value>
         <option name="FOREGROUND" value="FF80E1" />
@@ -545,6 +562,11 @@
     <option name="DEFAULT_KEYWORD">
       <value>
         <option name="FOREGROUND" value="FF9D00" />
+      </value>
+    </option>
+    <option name="DEFAULT_LABEL">
+      <value>
+        <option name="FOREGROUND" value="FFDD00" />
       </value>
     </option>
     <option name="DEFAULT_LINE_COMMENT">

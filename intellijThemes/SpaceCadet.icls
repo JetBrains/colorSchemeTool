@@ -349,6 +349,11 @@
         <option name="FOREGROUND" value="473C45" />
       </value>
     </option>
+    <option name="Clojure Literal">
+      <value>
+        <option name="FOREGROUND" value="6078BF" />
+      </value>
+    </option>
     <option name="Clojure Numbers">
       <value>
         <option name="FOREGROUND" value="A8885A" />
@@ -379,6 +384,16 @@
         <option name="FOREGROUND" value="473C45" />
       </value>
     </option>
+    <option name="DEFAULT_DOC_COMMENT_TAG">
+      <value>
+        <option name="FOREGROUND" value="473C45" />
+      </value>
+    </option>
+    <option name="DEFAULT_DOC_MARKUP">
+      <value>
+        <option name="FOREGROUND" value="473C45" />
+      </value>
+    </option>
     <option name="DEFAULT_ENTITY">
       <value>
         <option name="FOREGROUND" value="A8885A" />
@@ -396,7 +411,18 @@
     </option>
     <option name="DEFAULT_GLOBAL_VARIABLE">
       <value>
+        <option name="FOREGROUND" value="6078BF" />
         <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="DEFAULT_IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="6078BF" />
+      </value>
+    </option>
+    <option name="DEFAULT_INSTANCE_FIELD">
+      <value>
+        <option name="FOREGROUND" value="6078BF" />
       </value>
     </option>
     <option name="DEFAULT_INSTANCE_METHOD">
@@ -419,9 +445,19 @@
         <option name="FOREGROUND" value="728059" />
       </value>
     </option>
+    <option name="DEFAULT_LABEL">
+      <value>
+        <option name="FOREGROUND" value="6078BF" />
+      </value>
+    </option>
     <option name="DEFAULT_LINE_COMMENT">
       <value>
         <option name="FOREGROUND" value="473C45" />
+      </value>
+    </option>
+    <option name="DEFAULT_LOCAL_VARIABLE">
+      <value>
+        <option name="FOREGROUND" value="6078BF" />
       </value>
     </option>
     <option name="DEFAULT_NUMBER">
@@ -441,6 +477,7 @@
     </option>
     <option name="DEFAULT_STATIC_FIELD">
       <value>
+        <option name="FOREGROUND" value="6078BF" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -968,6 +1005,11 @@
     <option name="PUPPET_STRING">
       <value>
         <option name="FOREGROUND" value="805978" />
+      </value>
+    </option>
+    <option name="PUPPET_VARIABLE">
+      <value>
+        <option name="FOREGROUND" value="6078BF" />
       </value>
     </option>
     <option name="PUPPET_VARIABLE_INTERPOLATION">
