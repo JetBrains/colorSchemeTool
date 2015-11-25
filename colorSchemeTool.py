@@ -833,6 +833,8 @@ def write_idea_scheme(filename):
                     ET.SubElement(value, 'option', name='EFFECT_COLOR', value=text.value.foreground)
             if attr.value.error_stripe:
                 ET.SubElement(value, 'option', name='ERROR_STRIPE_COLOR', value=attr.value.error_stripe)
+        else:
+            ET.SubElement(attributes, 'option', name=attr.id, baseAttributes=attr.parent.id)
     indent(scheme)
     ET.ElementTree(scheme).write(open(filename, "w+"))
 
