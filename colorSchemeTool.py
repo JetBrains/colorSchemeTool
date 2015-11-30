@@ -622,6 +622,10 @@ oc_enum_const = Attribute("ENUM_CONST", text, scope='constant.other.symbol')
 oc_macroname = Attribute("MACRONAME", oc_function)
 oc_macro_parameter = Attribute("MACRO_PARAMETER", text)
 
+# PHP
+php_var = Attribute("PHP_VAR", default_local_variable)
+php_parameter = Attribute("PHP_PARAMETER", default_parameter)
+
 # CustomHighlighter
 custom_number = Attribute("CUSTOM_NUMBER_ATTRIBUTES", default_number)
 custom_string = Attribute("CUSTOM_STRING_ATTRIBUTES", default_string)
