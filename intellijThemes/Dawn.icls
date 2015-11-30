@@ -1065,6 +1065,16 @@
     </option>
     <option baseAttributes="DEFAULT_STRING" name="OC_FORMAT_TOKEN" />
     <option baseAttributes="TEXT" name="PARAMETER_ATTRIBUTES" />
+    <option name="PHP_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="234A97" />
+      </value>
+    </option>
+    <option name="PHP_VAR">
+      <value>
+        <option name="FOREGROUND" value="234A97" />
+      </value>
+    </option>
     <option name="PROTOCOL_REFERENCE">
       <value>
         <option name="FOREGROUND" value="BF4F24" />

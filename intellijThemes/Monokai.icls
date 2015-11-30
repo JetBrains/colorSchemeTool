@@ -997,6 +997,13 @@
       </value>
     </option>
     <option baseAttributes="TEXT" name="PARAMETER_ATTRIBUTES" />
+    <option name="PHP_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="FD971F" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option baseAttributes="DEFAULT_LOCAL_VARIABLE" name="PHP_VAR" />
     <option name="PROTOCOL_REFERENCE">
       <value>
         <option name="FOREGROUND" value="A6E22E" />

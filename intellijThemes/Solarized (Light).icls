@@ -1013,6 +1013,12 @@
       </value>
     </option>
     <option baseAttributes="TEXT" name="PARAMETER_ATTRIBUTES" />
+    <option baseAttributes="DEFAULT_PARAMETER" name="PHP_PARAMETER" />
+    <option name="PHP_VAR">
+      <value>
+        <option name="FOREGROUND" value="268BD2" />
+      </value>
+    </option>
     <option name="PROTOCOL_REFERENCE">
       <value>
         <option name="FOREGROUND" value="268BD2" />

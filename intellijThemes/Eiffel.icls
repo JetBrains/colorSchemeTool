@@ -1131,6 +1131,17 @@
       </value>
     </option>
     <option baseAttributes="TEXT" name="PARAMETER_ATTRIBUTES" />
+    <option name="PHP_PARAMETER">
+      <value>
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="PHP_VAR">
+      <value>
+        <option name="FOREGROUND" value="0206FF" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
     <option baseAttributes="CLASS_REFERENCE" name="PROTOCOL_REFERENCE" />
     <option name="PUPPET_BAD_CHARACTER">
       <value>
