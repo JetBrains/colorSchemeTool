@@ -225,14 +225,22 @@ bad_character = Attribute("BAD_CHARACTER", text, scope='invalid')
 matched_brace = Attribute("MATCHED_BRACE_ATTRIBUTES", text, background=(153, 204, 255))
 unmatched_brace = Attribute("UNMATCHED_BRACE_ATTRIBUTES", text, background=(255, 220, 220))
 
+# DefaultLanguageHighlighterColors
+local_variable = Attribute("DEFAULT_LOCAL_VARIABLE", text)
+instance_field = Attribute("DEFAULT_INSTANCE_FIELD", text)
+static_field = Attribute("DEFAULT_STATIC_FIELD", text)
+static_method = Attribute("DEFAULT_STATIC_METHOD", text)
+parameter = Attribute("DEFAULT_PARAMETER", text)
+class_name = Attribute("DEFAULT_CLASS_NAME", text)
+
 # CodeInsightColors
-local_variable = Attribute("LOCAL_VARIABLE_ATTRIBUTES", text)
-implicit_anonymous_class_parameter = Attribute("IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES", text)
-instance_field = Attribute("INSTANCE_FIELD_ATTRIBUTES", text)
-static_field = Attribute("STATIC_FIELD_ATTRIBUTES", text)
-static_method = Attribute("STATIC_METHOD_ATTRIBUTES", text)
-parameter = Attribute("PARAMETER_ATTRIBUTES", text)
-class_name = Attribute("CLASS_NAME_ATTRIBUTES", text)
+java_local_variable = Attribute("LOCAL_VARIABLE_ATTRIBUTES", text)
+java_implicit_anonymous_class_parameter = Attribute("IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES", text)
+java_instance_field = Attribute("INSTANCE_FIELD_ATTRIBUTES", text)
+java_static_field = Attribute("STATIC_FIELD_ATTRIBUTES", text)
+java_static_method = Attribute("STATIC_METHOD_ATTRIBUTES", text)
+java_parameter = Attribute("PARAMETER_ATTRIBUTES", text)
+java_class_name = Attribute("CLASS_NAME_ATTRIBUTES", text)
 
 # SyntaxHighlighterColors
 line_comment = Attribute("JAVA_LINE_COMMENT", text, scope='comment.line')
@@ -357,7 +365,7 @@ sql_table = Attribute("SQL_TABLE", class_name)
 sql_column = Attribute("SQL_COLUMN", instance_field)
 sql_schema = Attribute("SQL_SCHEMA", class_name)
 sql_database_object = Attribute("SQL_DATABASE_OBJECT", class_name)
-sql_synthetic_entity = Attribute("SQL_SYNTETIC_ENTITY", implicit_anonymous_class_parameter)
+sql_synthetic_entity = Attribute("SQL_SYNTETIC_ENTITY", java_implicit_anonymous_class_parameter)
 
 # RegExp
 rx_meta = Attribute("REGEXP.META", keyword)
