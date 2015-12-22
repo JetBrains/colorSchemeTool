@@ -11,6 +11,6 @@ do
     DIR="${FILE:0:${#FILE} - ${#FN}}"
     BASE="${FN%.[^.]*}"
     EXT="${FN:${#BASE} + 1}"
-    echo converting $DIR$FN$EXT to $OUTDIR$BASE.xml ...
-	python colorSchemeTool.py $FILE $OUTDIR$BASE.xml >> ./colorSchemeTool.log
+    echo converting $DIR$FN to $OUTDIR$BASE.icls ...
+	python colorSchemeTool.py "$FILE" "$OUTDIR$BASE.icls" >> ./colorSchemeTool.log
 done
