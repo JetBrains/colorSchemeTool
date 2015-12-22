@@ -398,12 +398,11 @@ sass_comment = Attribute("SASS_COMMENT", default_block_comment, scope='comment.b
 sass_number = Attribute("SASS_NUMBER", default_number, scope='constant.numeric.css')
 
 # JS
-js_regexp = Attribute("JS.REGEXP", text, scope='string.regexp')
-js_local_var = Attribute("JS.LOCAL_VARIABLE", text, foreground=(69, 131, 131))
-js_parameter = Attribute("JS.PARAMETER", text, effect_type=1, scope='variable.parameter')
-js_instance_member_func = Attribute("JS.INSTANCE_MEMBER_FUNCTION", text, foreground=(0x7a, 0x7a, 43))
-js_attr = Attribute("JS.ATTRIBUTE", text, background=(0xf7, 0xe9, 0xe9))
-
+js_regexp = Attribute("JS.REGEXP", default_string, scope='string.regexp')
+js_local_var = Attribute("JS.LOCAL_VARIABLE", default_local_variable)
+js_global_var = Attribute("JS.GLOBAL_VARIABLE", default_global_variable)
+js_parameter = Attribute("JS.PARAMETER", default_parameter, effect_type=1, scope='variable.parameter')
+js_instance_member_func = Attribute("JS.INSTANCE_MEMBER_FUNCTION", default_instance_method)
 
 # YAML
 yaml_comment = Attribute("YAML_COMMENT", default_line_comment, scope="comment.line.number-sign.yaml")
