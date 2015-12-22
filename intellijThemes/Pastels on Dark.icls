@@ -861,19 +861,16 @@
         <option name="FOREGROUND" value="AFA472" />
       </value>
     </option>
-    <option name="JS.ATTRIBUTE">
+    <option name="JS.GLOBAL_VARIABLE">
       <value>
-        <option name="BACKGROUND" value="423535" />
+        <option name="FOREGROUND" value="C1C144" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
-    <option name="JS.INSTANCE_MEMBER_FUNCTION">
-      <value>
-        <option name="FOREGROUND" value="979748" />
-      </value>
-    </option>
+    <option baseAttributes="DEFAULT_INSTANCE_METHOD" name="JS.INSTANCE_MEMBER_FUNCTION" />
     <option name="JS.LOCAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="64a2a2" />
+        <option name="FOREGROUND" value="C1C144" />
       </value>
     </option>
     <option name="JS.PARAMETER">

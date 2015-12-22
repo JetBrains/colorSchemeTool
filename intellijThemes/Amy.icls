@@ -946,19 +946,20 @@
         <option name="FOREGROUND" value="666666" />
       </value>
     </option>
-    <option name="JS.ATTRIBUTE">
+    <option name="JS.GLOBAL_VARIABLE">
       <value>
-        <option name="BACKGROUND" value="423535" />
+        <option name="FOREGROUND" value="008080" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="JS.INSTANCE_MEMBER_FUNCTION">
       <value>
-        <option name="FOREGROUND" value="979748" />
+        <option name="FOREGROUND" value="50A0A0" />
       </value>
     </option>
     <option name="JS.LOCAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="64a2a2" />
+        <option name="FOREGROUND" value="008080" />
       </value>
     </option>
     <option name="JS.PARAMETER">

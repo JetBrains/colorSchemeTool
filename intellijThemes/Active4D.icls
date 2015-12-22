@@ -853,22 +853,24 @@
       </value>
     </option>
     <option baseAttributes="TEXT" name="JAVA_VALID_STRING_ESCAPE" />
-    <option name="JS.ATTRIBUTE">
+    <option name="JS.GLOBAL_VARIABLE">
       <value>
-        <option name="BACKGROUND" value="f7e9e9" />
+        <option name="FOREGROUND" value="0053FF" />
+        <option name="FONT_TYPE" value="3" />
       </value>
     </option>
     <option name="JS.INSTANCE_MEMBER_FUNCTION">
       <value>
-        <option name="FOREGROUND" value="7a7a2b" />
+        <option name="FOREGROUND" value="21439C" />
       </value>
     </option>
     <option name="JS.LOCAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="458383" />
+        <option name="FOREGROUND" value="0053FF" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
-    <option baseAttributes="TEXT" name="JS.PARAMETER" />
+    <option baseAttributes="DEFAULT_PARAMETER" name="JS.PARAMETER" />
     <option name="JS.REGEXP">
       <value>
         <option name="FOREGROUND" value="666666" />

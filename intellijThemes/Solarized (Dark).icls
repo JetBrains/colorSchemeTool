@@ -861,22 +861,23 @@
         <option name="FOREGROUND" value="CB4B16" />
       </value>
     </option>
-    <option name="JS.ATTRIBUTE">
+    <option name="JS.GLOBAL_VARIABLE">
       <value>
-        <option name="BACKGROUND" value="423535" />
+        <option name="FOREGROUND" value="268BD2" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="JS.INSTANCE_MEMBER_FUNCTION">
       <value>
-        <option name="FOREGROUND" value="979748" />
+        <option name="FOREGROUND" value="268BD2" />
       </value>
     </option>
     <option name="JS.LOCAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="64a2a2" />
+        <option name="FOREGROUND" value="268BD2" />
       </value>
     </option>
-    <option baseAttributes="TEXT" name="JS.PARAMETER" />
+    <option baseAttributes="DEFAULT_PARAMETER" name="JS.PARAMETER" />
     <option name="JS.REGEXP">
       <value>
         <option name="FOREGROUND" value="D30102" />
