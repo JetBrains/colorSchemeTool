@@ -694,6 +694,18 @@
       </value>
     </option>
     <option baseAttributes="TEXT" name="IVAR" />
+    <option name="JADE_FILE_PATH">
+      <value>
+        <option name="FOREGROUND" value="00A33F" />
+      </value>
+    </option>
+    <option baseAttributes="DEFAULT_LABEL" name="JADE_FILTER_NAME" />
+    <option baseAttributes="DEFAULT_IDENTIFIER" name="JADE_JS_BLOCK" />
+    <option name="JADE_STATEMENTS">
+      <value>
+        <option name="FOREGROUND" value="FF5600" />
+      </value>
+    </option>
     <option name="JAVA_BLOCK_COMMENT">
       <value>
         <option name="FOREGROUND" value="919191" />
@@ -1245,6 +1257,41 @@
     <option baseAttributes="SLIM_STATIC_CONTENT" name="SLIM_TAG" />
     <option baseAttributes="HAML_TEXT" name="SLIM_TAG_ATTR_KEY" />
     <option baseAttributes="SLIM_STATIC_CONTENT" name="SLIM_TAG_START" />
+    <option name="SPY-JS.EXCEPTION">
+      <value>
+        <option name="BACKGROUND" value="ffcccc" />
+        <option name="EFFECT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" value="000000" />
+      </value>
+    </option>
+    <option name="SPY-JS.FUNCTION_SCOPE">
+      <value>
+        <option name="BACKGROUND" value="fffff0" />
+        <option name="EFFECT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" value="000000" />
+      </value>
+    </option>
+    <option name="SPY-JS.PATH_LEVEL_ONE">
+      <value>
+        <option name="BACKGROUND" value="e2ffe2" />
+        <option name="EFFECT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" value="000000" />
+      </value>
+    </option>
+    <option name="SPY-JS.PATH_LEVEL_TWO">
+      <value>
+        <option name="EFFECT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" value="000000" />
+      </value>
+    </option>
+    <option name="SPY-JS.PROGRAM_SCOPE">
+      <value>
+        <option name="BACKGROUND" value="ffffff" />
+        <option name="EFFECT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" value="000000" />
+      </value>
+    </option>
+    <option baseAttributes="TEXT" name="SPY-JS.VALUE_HINT" />
     <option name="STATIC_FIELD_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="660e7a" />

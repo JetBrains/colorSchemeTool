@@ -633,6 +633,12 @@ custom_multi_line_comment = Attribute("CUSTOM_MULTI_LINE_COMMENT_ATTRIBUTES", de
 custom_valid_string_escape = Attribute("CUSTOM_VALID_STRING_ESCAPE_ATTRIBUTES", default_valid_string_escape)
 custom_invalid_string_escape = Attribute("CUSTOM_INVALID_STRING_ESCAPE_ATTRIBUTES", default_invalid_string_escape)
 
+# Jade
+jade_statements = Attribute("JADE_STATEMENTS", default_keyword)
+jade_file_path = Attribute("JADE_FILE_PATH", default_string)
+jade_filter_name = Attribute("JADE_FILTER_NAME", default_label)
+jade_js_block = Attribute("JADE_JS_BLOCK", default_identifier)
+
 def color_from_textmate(color, alpha_blend_with=None):
     rgba = color[1:]
     if len(rgba) == 8 and alpha_blend_with:
@@ -774,6 +780,8 @@ def load_textmate_scheme(tmtheme):
     
     all_colors['CONSOLE_BACKGROUND_KEY'] = text.value.background
 
+    blend_spy_js_attributes(background)
+
     for attr in all_attributes:
         if attr.scope:
             settings = find_by_scope(all_settings, attr.scope)
@@ -787,6 +795,18 @@ def load_textmate_scheme(tmtheme):
                print "[!] scope not found: " + attr.scope
     return all_settings, used_scopes
 
+def blend_spy_js_attributes(background):
+    Attribute("SPY-JS.FUNCTION_SCOPE", text, background=blend_with_as_rgb256(background, "#fffff0", "04"), effect_type=2)
+    Attribute("SPY-JS.PROGRAM_SCOPE", text, background=blend_with_as_rgb256(background, "#ffffff", "04"), effect_type=2)
+    Attribute("SPY-JS.EXCEPTION", text, background=blend_with_as_rgb256(background, "#FFCCCC", "04"), effect_type=2)
+    Attribute("SPY-JS.PATH_LEVEL_ONE", text, background=blend_with_as_rgb256(background, "#E2FFE2", "04"), effect_type=2)
+    Attribute("SPY-JS.PATH_LEVEL_TWO", text, effect_type=1)
+    Attribute("SPY-JS.VALUE_HINT", text, effect_type=0)
+    return
+
+def blend_with_as_rgb256(base_hex_color, blend_with_hex_color, blend_hex_alpha):
+    result = hex_to_rgb(color_from_textmate(base_hex_color + blend_hex_alpha, blend_with_hex_color))
+    return int(result[0] * 256), int(result[1] * 256), int(result[2] * 256)
 
 def underscore_to_camelcase(value):
     def camelcase():
