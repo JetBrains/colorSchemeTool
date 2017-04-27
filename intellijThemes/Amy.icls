@@ -1,7 +1,4 @@
-<scheme name="Amy" parent_scheme="Default" version="1">
-  <option name="LINE_SPACING" value="1.0" />
-  <option name="EDITOR_FONT_SIZE" value="12" />
-  <option name="EDITOR_FONT_NAME" value="Menlo" />
+<scheme name="Amy" parent_scheme="Darcula" version="1">
   <colors>
     <option name="CONSOLE_BACKGROUND_KEY" value="200020" />
     <option name="INDENT_GUIDE" value="BFBFBF" />
