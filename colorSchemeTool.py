@@ -816,12 +816,15 @@ def underscore_to_camelcase(value):
     c = camelcase()
     return "".join(c.next()(x) if x else '_' for x in value.split("_"))
 
+def isDark():
+    back = hex_to_rgb(text.value.background)
+    intensity = (back[0] + back[1] + back[2])/3
+    return intensity < 0.5
+
 def write_idea_scheme(filename):
     name, ext = os.path.splitext(os.path.basename(filename))
-    scheme = ET.Element("scheme", name=underscore_to_camelcase(name), version="1", parent_scheme="Default")
-    ET.SubElement(scheme, 'option', name='LINE_SPACING', value='1.0')
-    ET.SubElement(scheme, 'option', name='EDITOR_FONT_SIZE', value='12')
-    ET.SubElement(scheme, 'option', name='EDITOR_FONT_NAME', value='Menlo')
+    baseName = "Darcula" if isDark() else "Default"
+    scheme = ET.Element("scheme", name=underscore_to_camelcase(name), version="1", parent_scheme=baseName)
     colors = ET.SubElement(scheme, 'colors')
     for name, value in all_colors.iteritems():
         ET.SubElement(colors, 'option', name=name, value=value)
