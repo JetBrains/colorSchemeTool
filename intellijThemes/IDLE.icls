@@ -525,15 +525,6 @@
         <option name="BACKGROUND" value="ff" />
       </value>
     </option>
-    <option name="FOLDED_TEXT_ATTRIBUTES">
-      <value>
-        <option name="FOREGROUND" value="c3c3c3" />
-        <option name="BACKGROUND" value="f0f0f0" />
-        <option name="FONT_TYPE" value="1" />
-        <option name="EFFECT_TYPE" value="1" />
-        <option name="EFFECT_COLOR" value="c3c3c3" />
-      </value>
-    </option>
     <option name="FOLLOWED_HYPERLINK_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="0000ff" />
@@ -796,11 +787,6 @@
         <option name="BACKGROUND" value="99ccff" />
       </value>
     </option>
-    <option name="MESSAGE_ARGUMENT">
-      <value>
-        <option name="FOREGROUND" value="21439C" />
-      </value>
-    </option>
     <option name="NOT_USED_ELEMENT_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="808080" />
@@ -832,16 +818,6 @@
     </option>
     <option baseAttributes="TEXT" name="OC.DOT" />
     <option baseAttributes="OC.LOCAL_VARIABLE" name="OC.EXTERN_VARIABLE" />
-    <option name="OC.FUNCTION">
-      <value>
-        <option name="FOREGROUND" value="21439C" />
-      </value>
-    </option>
-    <option name="OC.FUNCTION">
-      <value>
-        <option name="FOREGROUND" value="21439C" />
-      </value>
-    </option>
     <option baseAttributes="OC.LOCAL_VARIABLE" name="OC.GLOBAL_VARIABLE" />
     <option name="OC.KEYWORD">
       <value>
@@ -854,6 +830,16 @@
       </value>
     </option>
     <option baseAttributes="TEXT" name="OC.LOCAL_VARIABLE" />
+    <option name="OC.MESSAGE_ARGUMENT">
+      <value>
+        <option name="FOREGROUND" value="21439C" />
+      </value>
+    </option>
+    <option name="OC.METHOD_DECLARATION">
+      <value>
+        <option name="FOREGROUND" value="21439C" />
+      </value>
+    </option>
     <option baseAttributes="DEFAULT_NUMBER" name="OC.NUMBER" />
     <option baseAttributes="OC.DOT" name="OC.OPERATION_SIGN" />
     <option baseAttributes="TEXT" name="OC.PARAMETER" />

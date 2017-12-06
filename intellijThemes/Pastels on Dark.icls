@@ -600,15 +600,6 @@
         <option name="BACKGROUND" value="c7c7ff" />
       </value>
     </option>
-    <option name="FOLDED_TEXT_ATTRIBUTES">
-      <value>
-        <option name="FOREGROUND" value="3c3d3c" />
-        <option name="BACKGROUND" value="101010" />
-        <option name="FONT_TYPE" value="1" />
-        <option name="EFFECT_TYPE" value="1" />
-        <option name="EFFECT_COLOR" value="3c3d3c" />
-      </value>
-    </option>
     <option name="FOLLOWED_HYPERLINK_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="c7c7ff" />
@@ -905,14 +896,13 @@
       </value>
     </option>
     <option baseAttributes="TEXT" name="LOCAL_VARIABLE_ATTRIBUTES" />
-    <option baseAttributes="OC.FUNCTION" name="MACRONAME" />
+    <option baseAttributes="OC.MESSAGE_ARGUMENT" name="MACRONAME" />
     <option baseAttributes="TEXT" name="MACRO_PARAMETER" />
     <option name="MATCHED_BRACE_ATTRIBUTES">
       <value>
         <option name="BACKGROUND" value="3a6da0" />
       </value>
     </option>
-    <option baseAttributes="TEXT" name="MESSAGE_ARGUMENT" />
     <option name="NOT_USED_ELEMENT_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="80807f" />
@@ -949,8 +939,6 @@
         <option name="FOREGROUND" value="C1C144" />
       </value>
     </option>
-    <option baseAttributes="TEXT" name="OC.FUNCTION" />
-    <option baseAttributes="MESSAGE_ARGUMENT" name="OC.FUNCTION" />
     <option name="OC.GLOBAL_VARIABLE">
       <value>
         <option name="FOREGROUND" value="C1C144" />
@@ -971,6 +959,8 @@
         <option name="FOREGROUND" value="C1C144" />
       </value>
     </option>
+    <option baseAttributes="DEFAULT_FUNCTION_CALL" name="OC.MESSAGE_ARGUMENT" />
+    <option baseAttributes="DEFAULT_FUNCTION_DECLARATION" name="OC.METHOD_DECLARATION" />
     <option name="OC.NUMBER">
       <value>
         <option name="FOREGROUND" value="CCCCCC" />
