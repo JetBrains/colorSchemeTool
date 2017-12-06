@@ -179,7 +179,7 @@ def load_default_attributes(scheme_path):
 
 load_default_attributes('DefaultColorSchemesManager.xml')
 
-for id in ["FOLDED_TEXT_ATTRIBUTES",
+for id in [
            "SEARCH_RESULT_ATTRIBUTES",                # EditorColors
            "WRITE_SEARCH_RESULT_ATTRIBUTES",
            "IDENTIFIER_UNDER_CARET_ATTRIBUTES",
@@ -197,7 +197,7 @@ for id in ["FOLDED_TEXT_ATTRIBUTES",
            "FOLLOWED_HYPERLINK_ATTRIBUTES",
            "TODO_DEFAULT_ATTRIBUTES",
            "CONSOLE_NORMAL_OUTPUT",                   # ConsoleViewContentType
-           "CONSOLE_ERROR_OUTPUT", 
+           "CONSOLE_ERROR_OUTPUT",
            "CONSOLE_USER_INPUT",
            "CONSOLE_RED_OUTPUT",
            "CONSOLE_GREEN_OUTPUT",
@@ -591,7 +591,6 @@ oc_line_comment = Attribute("OC.LINE_COMMENT", default_line_comment)
 oc_cpp_keyword = Attribute("OC.CPP_KEYWORD", default_keyword)
 oc_conditionally_not_compiled = Attribute("CONDITIONALLY_NOT_COMPILED", default_block_comment)
 oc_directive = Attribute("OC.DIRECTIVE", text, scope='keyword.other.directive')
-oc_function = Attribute("OC.FUNCTION", text, scope='entity.name.function')
 oc_ivar = Attribute("IVAR", text, scope='variable.other.selector.objc')
 oc_local_variable = Attribute("OC.LOCAL_VARIABLE", text, scope='variable.other.selector.objc')
 oc_global_variable = Attribute("OC.GLOBAL_VARIABLE", oc_local_variable)
@@ -605,9 +604,9 @@ oc_string = Attribute("OC.STRING", default_string)
 oc_struct_field = Attribute("OC.STRUCT_FIELD", text, scope='constant.other.symbol')
 oc_format_token = Attribute("OC_FORMAT_TOKEN", default_string, scope='string source')
 oc_class_reference = Attribute("CLASS_REFERENCE", oc_typedef, scope='entity.name.class')
-oc_protocol_reference = Attribute("PROTOCOL_REFERENCE", oc_class_reference, scope='meta.implementation.objc') 
-oc_message_argument = Attribute("MESSAGE_ARGUMENT", text, scope='entity.name.function')
-oc_function = Attribute("OC.FUNCTION", oc_message_argument)
+oc_protocol_reference = Attribute("PROTOCOL_REFERENCE", oc_class_reference, scope='meta.implementation.objc')
+oc_message_argument = Attribute("OC.MESSAGE_ARGUMENT", default_function_call, scope='entity.name.function')
+oc_method_declaration = Attribute("OC.METHOD_DECLARATION", default_function_declaration,  scope='entity.name.function')
 oc_parameter = Attribute("OC.PARAMETER", text, scope='variable.parameter.function.objc')
 oc_badcharacter = Attribute("OC.BADCHARACTER", text, scope='invalid')
 oc_dot = Attribute("OC.DOT", text)
@@ -615,10 +614,10 @@ oc_comma = Attribute("OC.COMMA", oc_dot)
 oc_braces = Attribute("OC.BRACES", oc_dot)
 oc_brackets = Attribute("OC.BRACKETS", oc_dot)
 oc_semicolon = Attribute("OC.SEMICOLON", oc_dot)
-oc_operation_sign = Attribute("OC.OPERATION_SIGN", oc_dot) 
+oc_operation_sign = Attribute("OC.OPERATION_SIGN", oc_dot)
 oc_parenths = Attribute("OC.PARENTHS", oc_dot)
 oc_enum_const = Attribute("ENUM_CONST", text, scope='constant.other.symbol')
-oc_macroname = Attribute("MACRONAME", oc_function)
+oc_macroname = Attribute("MACRONAME", oc_message_argument)
 oc_macro_parameter = Attribute("MACRO_PARAMETER", text)
 
 # PHP
