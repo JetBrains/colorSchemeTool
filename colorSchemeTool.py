@@ -241,7 +241,7 @@ default_constant=Attribute("DEFAULT_CONSTANT", default_identifier, scope='consta
 default_local_variable=Attribute("DEFAULT_LOCAL_VARIABLE", default_identifier, scope='variable.language')
 default_global_variable=Attribute("DEFAULT_GLOBAL_VARIABLE", default_local_variable, font_style=2)
 default_function_declaration=Attribute("DEFAULT_FUNCTION_DECLARATION", default_identifier, scope='entity.name.function')
-default_function_call=Attribute("DEFAULT_FUNCTION_CALL", default_function_declaration)
+default_function_call=Attribute("DEFAULT_FUNCTION_CALL", default_identifier, scope='variable.function')
 default_parameter=Attribute("DEFAULT_PARAMETER", default_identifier, scope='variable.parameter')
 default_class_name=Attribute("DEFAULT_CLASS_NAME", default_identifier, scope='entity.name')
 default_interface_name=Attribute("DEFAULT_INTERFACE_NAME", default_class_name)
