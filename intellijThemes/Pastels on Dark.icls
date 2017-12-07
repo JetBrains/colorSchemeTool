@@ -429,7 +429,11 @@
         <option name="FOREGROUND" value="AFA472" />
       </value>
     </option>
-    <option baseAttributes="DEFAULT_FUNCTION_DECLARATION" name="DEFAULT_FUNCTION_CALL" />
+    <option name="DEFAULT_FUNCTION_CALL">
+      <value>
+        <option name="FOREGROUND" value="C1C144" />
+      </value>
+    </option>
     <option baseAttributes="DEFAULT_IDENTIFIER" name="DEFAULT_FUNCTION_DECLARATION" />
     <option name="DEFAULT_GLOBAL_VARIABLE">
       <value>
@@ -872,7 +876,11 @@
       </value>
     </option>
     <option baseAttributes="TEXT" name="LOCAL_VARIABLE_ATTRIBUTES" />
-    <option baseAttributes="OC.MESSAGE_ARGUMENT" name="MACRONAME" />
+    <option name="MACRONAME">
+      <value>
+        <option name="FOREGROUND" value="C1C144" />
+      </value>
+    </option>
     <option baseAttributes="TEXT" name="MACRO_PARAMETER" />
     <option name="MATCHED_BRACE_ATTRIBUTES">
       <value>
@@ -935,7 +943,11 @@
         <option name="FOREGROUND" value="C1C144" />
       </value>
     </option>
-    <option baseAttributes="DEFAULT_FUNCTION_CALL" name="OC.MESSAGE_ARGUMENT" />
+    <option name="OC.MESSAGE_ARGUMENT">
+      <value>
+        <option name="FOREGROUND" value="C1C144" />
+      </value>
+    </option>
     <option baseAttributes="DEFAULT_FUNCTION_DECLARATION" name="OC.METHOD_DECLARATION" />
     <option name="OC.NUMBER">
       <value>

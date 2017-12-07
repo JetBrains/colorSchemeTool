@@ -518,7 +518,7 @@
     </option>
     <option name="DEFAULT_FUNCTION_CALL">
       <value>
-        <option name="FOREGROUND" value="FFDD00" />
+        <option name="FOREGROUND" value="CCCCCC" />
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_DECLARATION">

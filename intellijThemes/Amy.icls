@@ -459,11 +459,7 @@
         <option name="FOREGROUND" value="666666" />
       </value>
     </option>
-    <option name="DEFAULT_FUNCTION_CALL">
-      <value>
-        <option name="FOREGROUND" value="50A0A0" />
-      </value>
-    </option>
+    <option baseAttributes="DEFAULT_IDENTIFIER" name="DEFAULT_FUNCTION_CALL" />
     <option name="DEFAULT_FUNCTION_DECLARATION">
       <value>
         <option name="FOREGROUND" value="50A0A0" />

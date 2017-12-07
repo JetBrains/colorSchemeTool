@@ -452,11 +452,7 @@
         <option name="FOREGROUND" value="6782D3" />
       </value>
     </option>
-    <option name="DEFAULT_FUNCTION_CALL">
-      <value>
-        <option name="FOREGROUND" value="FF8000" />
-      </value>
-    </option>
+    <option baseAttributes="DEFAULT_IDENTIFIER" name="DEFAULT_FUNCTION_CALL" />
     <option name="DEFAULT_FUNCTION_DECLARATION">
       <value>
         <option name="FOREGROUND" value="FF8000" />
