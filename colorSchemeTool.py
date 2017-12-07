@@ -207,10 +207,6 @@ for id in [
            "CONSOLE_CYAN_OUTPUT",
            "CONSOLE_GRAY_OUTPUT",
            "CONSOLE_SYSTEM_OUTPUT",
-           "DIFF_MODIFIED",                           # DiffColors
-           "DIFF_DELETED",
-           "DIFF_INSERTED",
-           "DIFF_CONFLICT",
            "CUSTOM_KEYWORD1_ATTRIBUTES",              # CustomHighlighterColors
            "CUSTOM_KEYWORD2_ATTRIBUTES",
            "CUSTOM_KEYWORD3_ATTRIBUTES",
