@@ -211,8 +211,7 @@ for id in [
            "CUSTOM_KEYWORD2_ATTRIBUTES",
            "CUSTOM_KEYWORD3_ATTRIBUTES",
            "CUSTOM_KEYWORD4_ATTRIBUTES",
-           "BREAKPOINT_ATTRIBUTES",                   # DebuggerColors
-           "EXECUTIONPOINT_ATTRIBUTES"
+           "BREAKPOINT_ATTRIBUTES"                   # DebuggerColors
           ]:
     Attribute(id, text)
 
