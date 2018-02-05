@@ -555,12 +555,6 @@
         <option name="ERROR_STRIPE_COLOR" value="ff0000" />
       </value>
     </option>
-    <option name="EXECUTIONPOINT_ATTRIBUTES">
-      <value>
-        <option name="FOREGROUND" value="ffffff" />
-        <option name="BACKGROUND" value="ff" />
-      </value>
-    </option>
     <option name="FOLLOWED_HYPERLINK_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="0000ff" />
