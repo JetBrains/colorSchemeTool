@@ -28,6 +28,13 @@ def indent(elem, level=0):
         if level and (not elem.tail or not elem.tail.strip()):
             elem.tail = i
 
+def capitalize_colors(elem):
+    if len(elem):
+        for elem in elem:
+            if elem.get("value") is not None:
+                elem.set("value", elem.get("value").upper())
+            capitalize_colors(elem)
+
 def hex_to_rgb(color):
     l = len(color)
     r = int(color[l-6:l-4], 16) / 256 if l >= 6 else 0
@@ -790,8 +797,8 @@ def load_textmate_scheme(tmtheme):
     return all_settings, used_scopes
 
 def blend_spy_js_attributes(background):
-    Attribute("SPY-JS.FUNCTION_SCOPE", text, background=blend_with_as_rgb256(background, "#fffff0", "04"), effect_type=2)
-    Attribute("SPY-JS.PROGRAM_SCOPE", text, background=blend_with_as_rgb256(background, "#ffffff", "04"), effect_type=2)
+    Attribute("SPY-JS.FUNCTION_SCOPE", text, background=blend_with_as_rgb256(background, "#FFFFF0", "04"), effect_type=2)
+    Attribute("SPY-JS.PROGRAM_SCOPE", text, background=blend_with_as_rgb256(background, "#FFFFFF", "04"), effect_type=2)
     Attribute("SPY-JS.EXCEPTION", text, background=blend_with_as_rgb256(background, "#FFCCCC", "04"), effect_type=2)
     Attribute("SPY-JS.PATH_LEVEL_ONE", text, background=blend_with_as_rgb256(background, "#E2FFE2", "04"), effect_type=2)
     Attribute("SPY-JS.PATH_LEVEL_TWO", text, effect_type=1)
@@ -856,6 +863,7 @@ def write_idea_scheme(filename):
         else:
             ET.SubElement(attributes, 'option', name=attr.id, baseAttributes=attr.parent.id)
     indent(scheme)
+    capitalize_colors(scheme)
     ET.ElementTree(scheme).write(open(filename, "w+"))
 
 if len(sys.argv) != 3:
