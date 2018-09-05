@@ -1,0 +1,20 @@
+{
+  "name": "colorschemetool",
+  "version": "1.0.0",
+  "description": "[![JetBrains team project](http://jb.gg/badges/team.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)",
+  "main": "vscToTm.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JetBrains/colorSchemeTool.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/JetBrains/colorSchemeTool/issues"
+  },
+  "homepage": "https://github.com/JetBrains/colorSchemeTool#readme",
+  "dependencies": {
+    "json5": "2.0.1",
+    "plist": "3.0.1"
+  }
+}
