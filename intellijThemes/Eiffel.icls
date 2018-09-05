@@ -467,8 +467,8 @@
     </option>
     <option name="DEFAULT_FUNCTION_CALL">
       <value>
-        <option name="FOREGROUND" value="0206FF" />
-        <option name="FONT_TYPE" value="2" />
+        <option name="FOREGROUND" value="3C4C72" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_DECLARATION">

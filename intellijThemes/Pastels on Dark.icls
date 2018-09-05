@@ -431,7 +431,7 @@
     </option>
     <option name="DEFAULT_FUNCTION_CALL">
       <value>
-        <option name="FOREGROUND" value="C1C144" />
+        <option name="FOREGROUND" value="A1A1FF" />
       </value>
     </option>
     <option baseAttributes="DEFAULT_IDENTIFIER" name="DEFAULT_FUNCTION_DECLARATION" />
@@ -872,7 +872,7 @@
     <option baseAttributes="TEXT" name="LOCAL_VARIABLE_ATTRIBUTES" />
     <option name="MACRONAME">
       <value>
-        <option name="FOREGROUND" value="C1C144" />
+        <option name="FOREGROUND" value="A1A1FF" />
       </value>
     </option>
     <option baseAttributes="TEXT" name="MACRO_PARAMETER" />
@@ -939,7 +939,7 @@
     </option>
     <option name="OC.MESSAGE_ARGUMENT">
       <value>
-        <option name="FOREGROUND" value="C1C144" />
+        <option name="FOREGROUND" value="A1A1FF" />
       </value>
     </option>
     <option baseAttributes="DEFAULT_FUNCTION_DECLARATION" name="OC.METHOD_DECLARATION" />

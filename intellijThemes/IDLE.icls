@@ -373,7 +373,11 @@
     </option>
     <option baseAttributes="TEXT" name="DEFAULT_DOT" />
     <option baseAttributes="DEFAULT_IDENTIFIER" name="DEFAULT_ENTITY" />
-    <option baseAttributes="DEFAULT_IDENTIFIER" name="DEFAULT_FUNCTION_CALL" />
+    <option name="DEFAULT_FUNCTION_CALL">
+      <value>
+        <option name="FOREGROUND" value="A535AE" />
+      </value>
+    </option>
     <option name="DEFAULT_FUNCTION_DECLARATION">
       <value>
         <option name="FOREGROUND" value="21439C" />

@@ -408,7 +408,7 @@
     <option baseAttributes="DEFAULT_IDENTIFIER" name="DEFAULT_ENTITY" />
     <option name="DEFAULT_FUNCTION_CALL">
       <value>
-        <option name="FOREGROUND" value="0053FF" />
+        <option name="FOREGROUND" value="45AE34" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>

@@ -411,11 +411,7 @@
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
-    <option name="Clojure Literal">
-      <value>
-        <option name="FOREGROUND" value="FFA995" />
-      </value>
-    </option>
+    <option baseAttributes="DEFAULT_INSTANCE_FIELD" name="Clojure Literal" />
     <option name="Clojure Numbers">
       <value>
         <option name="FOREGROUND" value="FFFFFF" />
@@ -474,7 +470,11 @@
         <option name="BACKGROUND" value="7878AA" />
       </value>
     </option>
-    <option baseAttributes="DEFAULT_IDENTIFIER" name="DEFAULT_FUNCTION_CALL" />
+    <option name="DEFAULT_FUNCTION_CALL">
+      <value>
+        <option name="FOREGROUND" value="E5B3FF" />
+      </value>
+    </option>
     <option name="DEFAULT_FUNCTION_DECLARATION">
       <value>
         <option name="FOREGROUND" value="FFA995" />
@@ -482,16 +482,11 @@
     </option>
     <option name="DEFAULT_GLOBAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="FFA995" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option baseAttributes="TEXT" name="DEFAULT_IDENTIFIER" />
-    <option name="DEFAULT_INSTANCE_FIELD">
-      <value>
-        <option name="FOREGROUND" value="FFA995" />
-      </value>
-    </option>
+    <option baseAttributes="DEFAULT_LOCAL_VARIABLE" name="DEFAULT_INSTANCE_FIELD" />
     <option name="DEFAULT_INSTANCE_METHOD">
       <value>
         <option name="FOREGROUND" value="FFA995" />
@@ -521,11 +516,7 @@
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
-    <option name="DEFAULT_LOCAL_VARIABLE">
-      <value>
-        <option name="FOREGROUND" value="FFA995" />
-      </value>
-    </option>
+    <option baseAttributes="DEFAULT_IDENTIFIER" name="DEFAULT_LOCAL_VARIABLE" />
     <option baseAttributes="TEXT" name="DEFAULT_METADATA" />
     <option name="DEFAULT_NUMBER">
       <value>
@@ -551,7 +542,6 @@
     <option baseAttributes="TEXT" name="DEFAULT_SEMICOLON" />
     <option name="DEFAULT_STATIC_FIELD">
       <value>
-        <option name="FOREGROUND" value="FFA995" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -935,7 +925,6 @@
     </option>
     <option name="JS.GLOBAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="FFA995" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -944,11 +933,7 @@
         <option name="FOREGROUND" value="FFA995" />
       </value>
     </option>
-    <option name="JS.LOCAL_VARIABLE">
-      <value>
-        <option name="FOREGROUND" value="FFA995" />
-      </value>
-    </option>
+    <option baseAttributes="DEFAULT_LOCAL_VARIABLE" name="JS.LOCAL_VARIABLE" />
     <option name="JS.PARAMETER">
       <value>
         <option name="FONT_TYPE" value="2" />
@@ -1106,11 +1091,7 @@
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
-    <option name="PHP_VAR">
-      <value>
-        <option name="FOREGROUND" value="FFA995" />
-      </value>
-    </option>
+    <option baseAttributes="DEFAULT_LOCAL_VARIABLE" name="PHP_VAR" />
     <option name="PROTOCOL_REFERENCE">
       <value>
         <option name="FOREGROUND" value="0000FF" />
@@ -1181,11 +1162,7 @@
         <option name="BACKGROUND" value="AA7878" />
       </value>
     </option>
-    <option name="PUPPET_VARIABLE">
-      <value>
-        <option name="FOREGROUND" value="FFA995" />
-      </value>
-    </option>
+    <option baseAttributes="DEFAULT_LOCAL_VARIABLE" name="PUPPET_VARIABLE" />
     <option name="PUPPET_VARIABLE_INTERPOLATION">
       <value>
         <option name="FOREGROUND" value="FFFFFF" />

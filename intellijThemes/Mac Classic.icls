@@ -402,7 +402,7 @@
     </option>
     <option name="Clojure Literal">
       <value>
-        <option name="FOREGROUND" value="318495" />
+        <option name="FOREGROUND" value="888888" />
       </value>
     </option>
     <option name="Clojure Numbers">
@@ -467,7 +467,8 @@
     </option>
     <option name="DEFAULT_FUNCTION_CALL">
       <value>
-        <option name="FOREGROUND" value="888888" />
+        <option name="FOREGROUND" value="3C4C72" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_DECLARATION">
@@ -478,7 +479,7 @@
     </option>
     <option name="DEFAULT_GLOBAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="318495" />
+        <option name="FOREGROUND" value="888888" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -489,7 +490,7 @@
     </option>
     <option name="DEFAULT_INSTANCE_FIELD">
       <value>
-        <option name="FOREGROUND" value="318495" />
+        <option name="FOREGROUND" value="888888" />
       </value>
     </option>
     <option name="DEFAULT_INSTANCE_METHOD">
@@ -528,7 +529,7 @@
     </option>
     <option name="DEFAULT_LOCAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="318495" />
+        <option name="FOREGROUND" value="888888" />
       </value>
     </option>
     <option name="DEFAULT_METADATA">
@@ -562,7 +563,7 @@
     <option baseAttributes="TEXT" name="DEFAULT_SEMICOLON" />
     <option name="DEFAULT_STATIC_FIELD">
       <value>
-        <option name="FOREGROUND" value="318495" />
+        <option name="FOREGROUND" value="888888" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -943,7 +944,7 @@
     </option>
     <option name="JS.GLOBAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="318495" />
+        <option name="FOREGROUND" value="888888" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -955,7 +956,7 @@
     </option>
     <option name="JS.LOCAL_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="318495" />
+        <option name="FOREGROUND" value="888888" />
       </value>
     </option>
     <option name="JS.PARAMETER">
@@ -1121,7 +1122,7 @@
     </option>
     <option name="PHP_VAR">
       <value>
-        <option name="FOREGROUND" value="318495" />
+        <option name="FOREGROUND" value="888888" />
       </value>
     </option>
     <option name="PROTOCOL_REFERENCE">
@@ -1193,7 +1194,7 @@
     </option>
     <option name="PUPPET_VARIABLE">
       <value>
-        <option name="FOREGROUND" value="318495" />
+        <option name="FOREGROUND" value="888888" />
       </value>
     </option>
     <option name="PUPPET_VARIABLE_INTERPOLATION">
