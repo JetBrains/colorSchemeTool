@@ -4,6 +4,7 @@ const fs = require('fs')
 
 function convert(vscTheme) {
     const tmTheme = {
+        name: vscTheme.name,
         settings: vscTheme.tokenColors
     }
     tmTheme.settings[0].settings.caret = vscTheme.colors["editorCursor.foreground"]
