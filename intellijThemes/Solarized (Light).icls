@@ -528,7 +528,7 @@
     </option>
     <option name="DJANGO_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="80" />
+        <option name="FOREGROUND" value="268BD2" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -703,7 +703,7 @@
     <option baseAttributes="XML_TAG" name="HTML_TAG" />
     <option name="HTML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="80" />
+        <option name="FOREGROUND" value="268BD2" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -1555,7 +1555,7 @@
     </option>
     <option name="XML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="80" />
+        <option name="FOREGROUND" value="268BD2" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>

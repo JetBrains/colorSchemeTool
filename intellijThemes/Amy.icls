@@ -308,7 +308,7 @@
     </option>
     <option name="CSS.FUNCTION">
       <value>
-        <option name="FOREGROUND" value="E3E3FF" />
+        <option name="FOREGROUND" value="009090" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -572,8 +572,7 @@
     </option>
     <option name="DJANGO_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="E3E3FF" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="009090" />
       </value>
     </option>
     <option name="DJANGO_TAG_START_END">
@@ -748,8 +747,7 @@
     </option>
     <option name="HTML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="E3E3FF" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="009090" />
       </value>
     </option>
     <option name="HYPERLINK_ATTRIBUTES">
@@ -1675,8 +1673,7 @@
     </option>
     <option name="XML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" value="E3E3FF" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="009090" />
       </value>
     </option>
     <option baseAttributes="DEFAULT_LINE_COMMENT" name="YAML_COMMENT" />
