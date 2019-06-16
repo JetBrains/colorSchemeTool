@@ -552,7 +552,6 @@
       </value>
     </option>
     <option baseAttributes="DEFAULT_CONSTANT" name="GO_BUILTIN_CONSTANT" />
-    <option baseAttributes="DEFAULT_CONSTANT" name="GO_BUILTIN_CONSTANT" />
     <option baseAttributes="DEFAULT_FUNCTION_CALL" name="GO_BUILTIN_FUNCTION_CALL" />
     <option baseAttributes="DEFAULT_CLASS_NAME" name="GO_BUILTIN_TYPE_REFERENCE" />
     <option name="GO_BUILTIN_VARIABLE">
@@ -576,6 +575,7 @@
         <option name="FOREGROUND" value="406040" />
       </value>
     </option>
+    <option baseAttributes="DEFAULT_CONSTANT" name="GO_LOCAL_CONSTANT" />
     <option name="GO_LOCAL_FUNCTION">
       <value>
         <option name="FOREGROUND" value="800000" />

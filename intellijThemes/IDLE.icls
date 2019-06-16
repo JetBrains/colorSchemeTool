@@ -551,7 +551,6 @@
       </value>
     </option>
     <option baseAttributes="DEFAULT_CONSTANT" name="GO_BUILTIN_CONSTANT" />
-    <option baseAttributes="DEFAULT_CONSTANT" name="GO_BUILTIN_CONSTANT" />
     <option name="GO_BUILTIN_FUNCTION_CALL">
       <value>
         <option name="FOREGROUND" value="A535AE" />
@@ -583,6 +582,7 @@
         <option name="FOREGROUND" value="919191" />
       </value>
     </option>
+    <option baseAttributes="DEFAULT_CONSTANT" name="GO_LOCAL_CONSTANT" />
     <option name="GO_LOCAL_FUNCTION">
       <value>
         <option name="FOREGROUND" value="21439C" />

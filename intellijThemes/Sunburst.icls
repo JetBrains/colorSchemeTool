@@ -698,11 +698,6 @@
         <option name="FOREGROUND" value="3387CC" />
       </value>
     </option>
-    <option name="GO_BUILTIN_CONSTANT">
-      <value>
-        <option name="FOREGROUND" value="3387CC" />
-      </value>
-    </option>
     <option name="GO_BUILTIN_FUNCTION_CALL">
       <value>
         <option name="FOREGROUND" value="DAD085" />
@@ -738,6 +733,11 @@
       <value>
         <option name="FOREGROUND" value="AEAEAE" />
         <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="GO_LOCAL_CONSTANT">
+      <value>
+        <option name="FOREGROUND" value="3387CC" />
       </value>
     </option>
     <option name="GO_LOCAL_FUNCTION">

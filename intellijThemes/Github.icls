@@ -759,11 +759,6 @@
         <option name="FOREGROUND" value="0086B3" />
       </value>
     </option>
-    <option name="GO_BUILTIN_CONSTANT">
-      <value>
-        <option name="FOREGROUND" value="0086B3" />
-      </value>
-    </option>
     <option name="GO_BUILTIN_FUNCTION_CALL">
       <value>
         <option name="FOREGROUND" value="0086B3" />
@@ -798,6 +793,11 @@
     <option name="GO_LINE_COMMENT">
       <value>
         <option name="FOREGROUND" value="969896" />
+      </value>
+    </option>
+    <option name="GO_LOCAL_CONSTANT">
+      <value>
+        <option name="FOREGROUND" value="0086B3" />
       </value>
     </option>
     <option name="GO_LOCAL_FUNCTION">

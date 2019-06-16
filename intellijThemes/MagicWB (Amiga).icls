@@ -702,7 +702,6 @@
       </value>
     </option>
     <option baseAttributes="DEFAULT_CONSTANT" name="GO_BUILTIN_CONSTANT" />
-    <option baseAttributes="DEFAULT_CONSTANT" name="GO_BUILTIN_CONSTANT" />
     <option name="GO_BUILTIN_FUNCTION_CALL">
       <value>
         <option name="FOREGROUND" value="E5B3FF" />
@@ -740,6 +739,7 @@
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
+    <option baseAttributes="DEFAULT_CONSTANT" name="GO_LOCAL_CONSTANT" />
     <option name="GO_LOCAL_FUNCTION">
       <value>
         <option name="FOREGROUND" value="FFA995" />
