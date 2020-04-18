@@ -743,7 +743,7 @@ def find_by_scope(settings, scope):
                     less_specific = setting
                     less_specific_weight = len(matchingScope)
                     less_specific_selector_size = aScopeSelectorSize
-                if scope.startswith(matchingScope):
+                if scope is not None and scope.startswith(matchingScope):
                     # We need:
                     # 2.  "Match most of the deepest element e.g. string.quoted wins over string."
                     # so let's consider matched symbols count as weight
@@ -781,30 +781,47 @@ def load_textmate_scheme(tmtheme):
 
     text.value = attr_from_textmate(default_settings, None, None)
 
-    background = default_settings['background']
+    background = None
+    selection_background = None
+    caret_row_color = None
 
-    all_colors['CARET_COLOR'] = color_from_textmate(default_settings['caret'])
-    all_colors['INDENT_GUIDE'] = color_from_textmate(default_settings['invisibles'], background)
-    all_colors['SELECTED_INDENT_GUIDE'] = all_colors['INDENT_GUIDE']
-    all_colors['WHITESPACES'] = color_from_textmate(default_settings['invisibles'], background)
-    all_colors["GUTTER_BACKGROUND"] = color_from_textmate(background)
-    all_colors["LINE_NUMBERS_COLOR"] = color_from_textmate(default_settings['foreground'])
+    if 'background' in default_settings:
+        background = default_settings['background']
+        all_colors["GUTTER_BACKGROUND"] = color_from_textmate(background)
 
-    selection_background = color_from_textmate(default_settings['selection'], background)
-    caret_row_color = color_from_textmate(default_settings['lineHighlight'], background)
-    if selection_background == caret_row_color:
+        if 'invisibles' in default_settings:
+            all_colors['INDENT_GUIDE'] = color_from_textmate(default_settings['invisibles'], background)
+            all_colors['SELECTED_INDENT_GUIDE'] = all_colors['INDENT_GUIDE']
+            all_colors['WHITESPACES'] = color_from_textmate(default_settings['invisibles'], background)
+
+        if 'selection' in default_settings:
+            selection_background = color_from_textmate(default_settings['selection'], background)
+            all_colors['SELECTION_BACKGROUND'] = selection_background
+
+        if 'lineHighlight' in default_settings:
+            caret_row_color = color_from_textmate(default_settings['lineHighlight'], background)
+
+    if 'caret' in default_settings:
+        all_colors['CARET_COLOR'] = color_from_textmate(default_settings['caret'])
+
+    if 'foreground' in default_settings:
+        all_colors["LINE_NUMBERS_COLOR"] = color_from_textmate(default_settings['foreground'])
+
+    if caret_row_color is not None and selection_background is not None and selection_background == caret_row_color:
         y, i, q = hex_to_yiq(caret_row_color)
         if y < 0.5:
             y /= 2
         else:
             y += 0.2
         caret_row_color = rgb_to_hex(*colorsys.yiq_to_rgb(y, i, q))
-    all_colors['CARET_ROW_COLOR'] = caret_row_color
-    all_colors['SELECTION_BACKGROUND'] = selection_background
-    
+
+    if caret_row_color is not None:
+        all_colors['CARET_ROW_COLOR'] = caret_row_color
+
     all_colors['CONSOLE_BACKGROUND_KEY'] = text.value.background
 
-    blend_spy_js_attributes(background)
+    if background is not None:
+        blend_spy_js_attributes(background)
 
     for attr in all_attributes:
         if attr.scope:
