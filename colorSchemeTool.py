@@ -711,7 +711,11 @@ def find_by_scope(settings, scope):
         if scope_of_setting is None:
             if scope is None: return setting
         else:
-            scopes_of_setting = scope_of_setting.split(",")
+            if not isinstance(scope_of_setting, list):
+                scopes_of_setting = scope_of_setting.split(",")
+            else:
+                scopes_of_setting = scope_of_setting
+
             for aScope in scopes_of_setting:
                 aScope = aScope.strip()
 
