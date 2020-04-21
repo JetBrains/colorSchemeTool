@@ -7,10 +7,23 @@ function convert(vscTheme) {
         name: vscTheme.name,
         settings: vscTheme.tokenColors
     }
-    tmTheme.settings[0].settings.caret = vscTheme.colors["editorCursor.foreground"]
-    tmTheme.settings[0].settings.invisibles = vscTheme.colors["editorWhitespace.foreground"]
-    tmTheme.settings[0].settings.selection = vscTheme.colors["editor.selectionBackground"]
-    tmTheme.settings[0].settings.lineHighlight = vscTheme.colors["editor.lineHighlightBackground"]
+
+    const defaultSettings = tmTheme.settings.find(setting => !setting.scope);
+
+    if (!defaultSettings) {
+        tmTheme.settings.unshift({ settings: {}});
+    }
+
+    const tmThemeDefaultSettings = tmTheme.settings[0].settings;
+    const vscThemeColors = vscTheme.colors;
+
+    const mapper = new SettingsMapper({tmThemeDefaultSettings, vscThemeColors});
+    mapper.addSetting("editorCursor.foreground", "caret");
+    mapper.addSetting("editor.selectionBackground", "selection");
+    mapper.addSetting("editor.lineHighlightBackground", "lineHighlight");
+    mapper.addSetting("editor.foreground", "foreground");
+    mapper.addSetting("editor.background", "background");
+    mapper.addSetting("editorWhitespace.foreground", "invisibles");
     for (i = 1; i < tmTheme.settings.length; i++) {
        const scope = tmTheme.settings[i].scope
        if (scope) {
@@ -18,6 +31,19 @@ function convert(vscTheme) {
        } 
     }
     return tmTheme
+}
+
+class SettingsMapper {
+    constructor({ tmThemeDefaultSettings, vscThemeColors }) {
+        this.tmThemeDefaultSettings = tmThemeDefaultSettings;
+        this.vscThemeColors = vscThemeColors;
+    }
+
+    addSetting(fromKey, toKey) {
+        if (fromKey in this.vscThemeColors) {
+            this.tmThemeDefaultSettings[toKey] = this.vscThemeColors[fromKey]
+        }
+    }
 }
 
 const vscTheme = json5.parse(fs.readFileSync(process.argv[2], "utf8"))
