@@ -4,7 +4,7 @@ This tool can help you convert color schemes used in TextMate and VS Code and ma
 
 Please note that converted color schemes may not look 100% precise because of the differences between the tools. If you spot any significant issues or encounter a problem, please report them [here](https://github.com/JetBrains/colorSchemeTool/issues).
 
-Note that the tool requires Python version 2.7. The default version of Python installed on macOS X Snow Leopard is 2.6; you'll need to use Python from MacPorts/Homebrew if you'd like to run the tool on 10.6.
+Note that the tool requires Node.js and Python 3.
 
 # How to convert VSCode theme
 **Note:** please check if the desired theme already exists in the [JetBrains plugin repository](https://plugins.jetbrains.com/) before converting it.
