@@ -5,8 +5,6 @@ base64-js
 
 [![build status](https://secure.travis-ci.org/beatgammit/base64-js.png)](http://travis-ci.org/beatgammit/base64-js)
 
-[![testling badge](https://ci.testling.com/beatgammit/base64-js.png)](https://ci.testling.com/beatgammit/base64-js)
-
 Many browsers already have base64 encoding/decoding functionality, but it is for text data, not all-purpose binary data.
 
 Sometimes encoding/decoding binary data in the browser is useful, and that is what this module does.
@@ -20,6 +18,8 @@ With [npm](https://npmjs.org) do:
 For use in web browsers do:
 
 `<script src="base64js.min.js"></script>`
+
+[Get supported base64-js with the Tidelift Subscription](https://tidelift.com/subscription/pkg/npm-base64-js?utm_source=npm-base64-js&utm_medium=referral&utm_campaign=readme)
 
 ## methods
 
