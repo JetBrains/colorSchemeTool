@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/JetBrains/colorSchemeTool#readme",
   "dependencies": {
-    "json5": "2.0.1",
+    "json5": "2.2.2",
     "plist": "3.0.1"
   }
 }
